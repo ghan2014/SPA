@@ -1,0 +1,71 @@
+
+<article class="articleInPage"
+	role="region"
+	aria-labeledby="Terms And Conditions"
+>
+
+	<header class="articleHeader_in_page">
+		<h1 class="articleHeading_in_page">
+				Terms And Conditions (Article Heading)
+		</h1>
+	</header>
+
+	<div class="articleBody_in_page">
+		<section class="articleSection_in_page">	
+			<header class="articleSectionHeader_in_page">
+				<h1 class="articleSectionHeading_in_page">
+					Section-1 Heading
+				</h1>
+			</header>
+			<div class="articleSectionBody_in_page">
+				<p class="articleParag_in_page">
+					Section-1 Parag-1
+				</p>
+				<p class="articleParag_in_page">
+					Section-1 Parag-2
+				</p>
+				<p class="articleParag_in_page">
+					Section-1 Parag-3
+				</p>
+			</div>
+		</section>
+			
+		<section class="articleSection_in_page">	
+			<header class="articleSectionHeader_in_page">
+				<h1 class="articleSectionHeading_in_page">
+					Section-2 Heading
+				</h1>
+			</header>
+			<div class="articleSectionBody_in_page">
+				<p class="articleParag_in_page">
+					Section-2 Parag-1
+				</p>
+				<p class="articleParag_in_page">
+					Section-2 Parag-2
+				</p>
+				<p class="articleParag_in_page">
+					Section-2 Parag-3
+				</p>
+			</div>
+		</section>
+			
+		<section class="articleSection_in_page">	
+			<header class="articleSectionHeader_in_page">
+				<h1 class="articleSectionHeading_in_page">
+					Section-3 Heading
+				</h1>
+			</header>
+			<div class="articleSectionBody_in_page">
+				<p class="articleParag_in_page">
+					Section-3 Parag-1
+				</p>
+				<p class="articleParag_in_page">
+					Section-3 Parag-2
+				</p>
+				<p class="articleParag_in_page">
+					Section-3 Parag-3
+				</p>
+			</div>
+		</section>
+	</div>
+</article

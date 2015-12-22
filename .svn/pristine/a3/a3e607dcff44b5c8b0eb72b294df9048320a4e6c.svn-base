@@ -1,0 +1,64 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: SignupCorePanelVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-signup-core-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.SignupCorePanelVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+
+		.forgotPassword {
+			{$AppVcc_formishFieldNoteAndLink}
+
+			/* Layout */
+			 margin-top: 6px
+			 
+			/* Style */
+			background-color: transparent
+			border: none
+
+		}
+
+		.GenderGroup {
+
+			/* Layout */
+			z-index: 1000
+		}
+
+		.Label_for_genderGroup {
+			/* Layout */
+			padding: 5px 8px 5px 2px
+			/* Style */
+			border_: solid 1px red
+		}
+		
+
+		.TOSCheckOffZone {
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+		}
+		
+		.TOSCheckOffInput {
+			/* Layout */
+			min-width: 15px;
+			margin-right: 3px
+			z-index: 10
+		}
+
+		
+

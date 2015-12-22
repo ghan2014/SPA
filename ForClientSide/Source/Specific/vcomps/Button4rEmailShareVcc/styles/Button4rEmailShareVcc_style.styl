@@ -1,0 +1,40 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: Button4rEmailShareVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-button-4r-email-share-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.Button4rEmailShareVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+		.shareTrigger
+			/* Style */
+			{$AppVcc_sprite-share_email}
+			border: none;
+			background-color: transparent;
+			border-radius: 50px /* Insure max curvature */
+
+		.shareTrigger:hover
+			{$AppVcc_triggerHoverEffect4rDarkishTrigger}
+		
+		.shareTrigger:active
+			{$AppVcc_triggerActiveEffect}
+			
+		
+		.shareTrigger:focus
+			outline: none;
+	
+

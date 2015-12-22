@@ -1,0 +1,79 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: FlexiHolderVcc_style.css
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+
+
+
+drct-flexi-holder-vcc,
+.drctFlexiHolderVcc {
+	/** Layout **/
+	display: block;
+}
+
+ 
+/* Set to default state of everything to switched off. 
+ * Then have ui state switch on and configure as needed for them.
+*/
+.FlexiHolderVcc,
+.FlexiArea,
+.FlexiAreaPrmStrata,
+.Well,
+.WellPrmStrata,
+.WellPrmStrata_MainSpc,
+.WellPrmStrata_MainSpc_MainSlot,
+.WellPrmStrata_MainSpc_UpN3Slot,
+.WellPrmStrata_MainSpc_UpN2Slot,
+.WellPrmStrata_MainSpc_UpN1Slot,
+.WellPrmStrata_MainSpc_DnN1Slot,
+.WellPrmStrata_MainSpc_DnN2Slot,
+.WellPrmStrata_MainSpc_DnN3Slot,
+.WellPrmStrata_LfN2Spc,
+.WellPrmStrata_LfN2Spc_DnN1Slot,
+.WellPrmStrata_LfN2Spc_DnN2Slot,
+.WellPrmStrata_LfN2Spc_DnN3Slot,
+.WellPrmStrata_LfN1Spc,
+.WellPrmStrata_LfN1Spc_DnN1Slot,
+.WellPrmStrata_LfN1Spc_DnN2Slot,
+.WellPrmStrata_LfN1Spc_DnN3Slot,
+.WellPrmStrata_RtN1Spc,
+.WellPrmStrata_RtN1Spc_DnN1Slot,
+.WellPrmStrata_RtN1Spc_DnN2Slot,
+.WellPrmStrata_RtN1Spc_DnN3Slot,
+.WellPrmStrata_RtN2Spc,
+.WellPrmStrata_RtN2Spc_DnN1Slot,
+.WellPrmStrata_RtN2Spc_DnN2Slot,
+.WellPrmStrata_RtN2Spc_DnN3Slot,
+.Well_UpN3Slot,
+.Well_UpN2Slot,
+.Well_UpN1Slot,
+.Well_DnN1Slot,
+.Well_DnN2Slot,
+.Well_DnN3Slot,
+.FlexiAreaPrmStrata_LfN1Spc,
+.FlexiAreaPrmStrata_LfN1Spc_DnN1Slot,
+.FlexiAreaPrmStrata_LfN1Spc_DnN2Slot,
+.FlexiAreaPrmStrata_LfN1Spc_DnN3Slot,
+.FlexiAreaPrmStrata_RtN1Spc,
+.FlexiAreaPrmStrata_RtN1Spc_DnN1Slot,
+.FlexiAreaPrmStrata_RtN1Spc_DnN2Slot,
+.FlexiAreaPrmStrata_RtN1Spc_DnN3Slot,
+.TopStrata,
+.FlexiArea_UpN3Slot,
+.FlexiArea_UpN2Slot,
+.FlexiArea_UpN1Slot,
+.BtmStrata,
+.FlexiArea_DnN1Slot,
+.FlexiArea_DnN2Slot,
+.FlexiArea_DnN3Slot,
+.TheFooterArea,
+.TheFooterArea_DnN1Slot,
+.TheFooterArea_DnN2Slot,
+.TheFooterArea_DnN3Slot {
+	display: none;
+}

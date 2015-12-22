@@ -1,0 +1,34 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: FlexiStndLayout.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+/**********************************************************************/
+@require '../../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = 'FlexiStndLayout'
+
+
+/**********************************************************************/
+
+
+
+
+
+
+/**********************************************************************/
+@require './FlexiStndLayout_max.styl'
+@require './FlexiStndLayout_rspn0.styl'
+@require './FlexiStndLayout_rspn1Xs.styl'
+@require './FlexiStndLayout_rspn2Sm.styl'
+@require './FlexiStndLayout_rspn3Md.styl'
+@require './FlexiStndLayout_rspn4Lg.styl'
+
+
+@require '../../stylesPerUiStates/StndChromeUSAM/StndChromeUSAM.styl'
+@require '../../stylesPerUiStates/StndStandAloneTypePgUSAM/StndStandAloneTypePgUSAM.styl'
+

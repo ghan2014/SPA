@@ -1,0 +1,32 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: ForgotPasswordPanelVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-login-core-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.ForgotPasswordPanelVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+
+
+
+.Header4StndUseVcc /* Elder */
+	.ForgotPasswordPanelVcc {
+		
+		/* Style */
+		color: #fff;
+	}
+

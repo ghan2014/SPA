@@ -1,0 +1,134 @@
+10/07/2015 - Jerry - Reduced delay to 4 seconds after page load for FB SDK to try and load itself.  The former 10 sec delay seemed be problematic for the FB share button.
+
+10/13/2015 early am - Jerry:
+* Dashes for spaces in links
+* IOS - Link to app store when play clicked (or like)
+* FB login/register "uncludge" for testing with just one FB user.
+* Change min pw length to 8 chars, and min email length to 6 chars
+* Validation messaging on login form removed, as well as a number of validation criteria.
+* Changed where necessary, trackIds for trackUids.
+* Track referenced in share link highlighted upon landing on playlist page.
+* TOC page
+
+10/14/2015 early am - Jerry 
+* Merged in Dave's code:
+  * Email Share hookup with API, and maybe some UI tweaks.
+  * Email Report hookup with API, and maybe some UI tweaks.
+   ** Added notice... service (for prior two)
+  * Forgot PW requester hookup with API.  No reset page yet.
+   ** Added members... service
+  * Ability to inject message into Dialog.
+* Refactored Email Share to make use of TrackUid
+
+10/20/2015 early am - Jerry 
+* FB login fix.  Fix with with Session Ax2 Resouce.
+* Login and Signup error messaging fix.
+* Responsive design fixes (all known)
+* Enapsulated the non-encapsulated css from recent work
+* Refactored some html/css to make it more consistent with standard practices.
+
+10/21/2015 early am - Jerry 
+* Option menu button on player partially fixed.  Fixed regression with var names, but player not sending need TrackId.
+  (Related to Fogbugz 22108, 22110)
+* Added First Name / Last Name fields to signup form, and reflected change to Ctrler and Service.
+* INTERNAL-FIX: Removed sym link to TOS html page (which btw, not used anymore)
+* G's code merged in.
+* From G's merge: Cover images for schools added
+* From G's merge. Password reset landing page (but no email address to test with)
+* FIXED: FogBugz (Case 22111) LiuMei - 4 - Project names should be displayed consistently everywhere.
+  Changed lib.styl detail/listing titles not to have Capitalize.
+* FIXED: FogBugz (Case 22100) LiuMei - 2 - On Player tab, clicking on Project icon at right corner displays blank page.
+  Do to merge regression where mediator transaction was still using school/project syns.
+* DEALT WITH: FogBugz (Case 22106) LiuMei - 2 - Unable to send Report from School page - receive message 'Sorry, Something Went Wrong.'
+  Dealt with by removing unneeded Report button at school and playlist levels.
+
+10/26/2015 late PM - Jerry
+* Signup process now provides for email validation.  User is able to resume from where they left off.
+
+11/02/2015 3:15 PM - Jerry
+* Added links in header and footer.
+* Refactored signup - email validation to fix Mac issue and provide for better UE.
+* Biz syns all in place.
+* Tweaks.
+
+11/03/2015 2:20 am - Jerry
+* Added password validation to reset password form.  Include check that passwords must match.
+* TOS and Privacy policy URLss revised to reference symoblic links.
+
+11/03/2015 2:20 am - Jerry
+* Sym linked Assests folder
+
+11/04/2015 0:10 am - Jerry
+* 1999 in copyright.
+* TOS checkbox in signup modal.
+* Regression fix so user can get to bottom of tall modals that stretch below the fold within phones.
+* More apparent Login / Logout / Signup links in phone
+* FB login button now says Signup with Facebook in signup modal.
+* Created "setup" BASH script.  For now it just builds symlinks.
+* Changed certain header/footer links' domain to http://www.liumei365.com/...
+* Added border top blur on top of player.
+
+11/04/2015 11:45 PM - Jerry
+* Fixed router not able to handle trailing slash for school page url.  Actually the fix was making sure that the short url UI state doesn't get confused with the long one with an empty string name.
+* Fixed lastname to lastName in signup submit API.  Last name now be recorded in DB.  Not seem year of birth did not need fixing.
+* Fixed regression bug that upon facebook login/signup user wasn't directed to goal page/state.
+* Changed "Next" message after signup to be "Please check your email and click the link to activate your account."
+
+
+11/05/2015 9:05 PM --  ^11/06/2015 4:20 PM -- Jerry
+* Created ability to pause (created pause method in toolbox) for player app to load before calling it.  This fixes issue in FF and IE of player not being there to get message to play episode in url.
+* Messaging on validation page is now dynamic (used pause on this too).  Also corresponding login forms notice/instructions are more completed.
+* Messaging on Reset password page is improved a bit.
+* Fixed issue that FF and IE aren't properly filling page for short pages.  This was done by setting the min height of the flexi-area to 100vh - height of footer.
+^ Set max len of all email fields to 100 (from 30)
+
+11/09/2015 - Jerry
+* Tweaks to text copy in email validation.s
+* Added one more try in notifyPlayer to wait for player to load.
+
+11/10/2015 12:30 PM - Jerry
+* Fixed issue not being able to scroll all the way down to reach submit button in signup form in iphone.  Fix was to set max-height to 85vh (from 97vh)
+* Made fbApiId setable from index.html
+
+11/10/2015 3:45 PM - Jerry
+* Revison so all services run with https (port 443).  Also config for this is now aaGlobalee.ourServicesProtocalHost = "https://???-api.nanocosm.com"
+
+11/11/2015 11:35 PM - Jerry
+* Config in index.html now includes FB app id config and version config.
+* Production config now has new FB app id for liumei talk.
+* Added cover image and new privacy policy
+
+
+
+11/12/2015 afternoon - Jerry
+* Added dev FB app id for liumei hostnames.
+* Added new sprite.
+
+11/13/2015 early am - Jerry
+* Changed TOS
+* Fixed HP cover image 
+
+
+11/17/2015 4:20 PM
+* Fixed text copy error "...TOCS?" in TOS conf.  Now asks "...TERMS OF SERVICE?"
+* Hide options for station if user not logged in.
+* School cover image again now scales.  
+* Added faint grey bottom border to cover images.  Not spec-ed, but I think it transitions better.
+* Fixed logic for school page cover images.  First try from station set, then from default set.
+* Updated facebook appId and appVer in index.html to correspond with Guohong's resolution of problem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

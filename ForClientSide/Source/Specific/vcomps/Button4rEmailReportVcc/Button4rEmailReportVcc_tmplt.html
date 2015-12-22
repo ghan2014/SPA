@@ -1,0 +1,24 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: Button4rEmailShareVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+	
+	<button
+		class = "reportTrigger"
+		data-drct_click_to_mediator_adc = '{
+			"notice": {
+				"noticeName": "EmailReportButton_clicked",
+				"purposing": {{loc.purposing}}
+			}
+		}'
+	>
+	</button>
+
+</div>

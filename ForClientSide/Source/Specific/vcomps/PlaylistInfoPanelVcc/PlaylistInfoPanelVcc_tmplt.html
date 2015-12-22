@@ -1,0 +1,107 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: PlaylistInfoPanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<section class="detailSection"
+		role="region"
+		aria-labeledby="Information about {{loc.playlistSyn}} "
+	>
+		
+		<div class="primayZone_in_detail">
+			<header class="header_in_detail">
+				<div class="headerContent_in_detail">
+					<div class="primaryZone_in_headerContent_in_detail"> 
+						<a class="parentLink_in_detail" href="{{loc.parentLinkData.linkHref}}" title="Link to {{loc.stationSyn}}">{{loc.parentLinkData.linkCopy}}</a>
+						<h1 class="heading_in_detail">
+							{{loc.details.name}}
+						</h1>
+						<div class="horizontalDashboard_in_detail">
+							<div class="episodeMeta_in_detail">
+								<span class="episodeMetaCopy_in_detail">
+									{{loc.tracksCount}}
+								</span>
+								<span class="episodeMetaLabel_in_detail">
+									{{loc.trackSyn}}{{ 's' | ifThis : loc.tracksCount : 'gte' : 2}}
+								</span>
+
+							</div>
+							<div class="durationMeta_in_detail">
+								<span class="durationMetaLabel_in_detail">
+									duration
+								</span>
+								<span class="durationMetaCopy_in_detail">
+									{{loc.details.duration  | millisToHhMmSs}}
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="verticalDashboardRight_in_detail">
+						<drct-menu-items-holder-with-trigger-vcc
+							data-aria_labeling = 'Options menu for this {{loc.playlistSyn}} .'
+							data-instance_idfier = '{{loc.myVcName}}'
+							data-go_dude = 'truee'
+						>
+							<md-menu-item>
+								<drct-button-4r-facebook-share-vcc
+									data-purposing = '{
+										"itemType": "Playlist",
+										"playlistId": "{{loc.playlistId}}",
+										"stationId": "{{loc.stationId}}"
+									}'
+									data-go_dude = 'truee'
+								></drct-button-4r-facebook-share-vcc>
+							</md-menu-item>
+
+							<md-menu-item>
+								<drct-button-4r-email-share-vcc
+									data-purposing = '{
+										"itemType": "Playlist",
+										"playlistId": "{{loc.playlistId}}",
+										"stationId": "{{loc.stationId}}"
+									}'
+									data-go_dude = 'truee'
+								></drct-button-4r-email-share-vcc>
+							</md-menu-item>
+
+
+
+						</drct-menu-items-holder-with-trigger-vcc>
+					</div>
+					<img class="logo_in_detail" 
+						src="{{loc.details.logoUrl}}"
+						alt="Logo for {{loc.playlistSyn}} named {{loc.details.name}}"
+					>
+				</div>
+			</header>
+			<p class="descriptionZone_in_detail">
+					<script>
+						function triggerClick() {
+							///alert("going to trigger")
+							///$("#target2").click()
+							///console.dog(">>> angular.element('#target2'). is : ", angular.element('#target2'))
+
+							///angular.element('#target2').trigger('click');
+							///$("#target2").click()
+							$("#target2 .md-icon-button ").click()
+						}
+					</script>
+
+
+				<span class="descriptionCopy_in_detail">
+					{{loc.details.description}}
+				</span>
+			</p>
+		</div>
+	</section>
+
+</div>
+

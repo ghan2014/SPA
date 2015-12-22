@@ -1,0 +1,24 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: TestItVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+<div class="TestItVcc vcBox">
+	<div class="whoAmI">This is the inside of {{datas.view.info.myname}}.</div>
+
+	[**TestItVccLinkTmplt**]
+
+	<h2 class="panelDisplayedTitle">{{atrbPanelDisplayedTitle}}</h2>
+
+	
+
+	<drct-station-listings-4r-recent-vcc 
+		ng-if="atrbUse == 'RecentStations'" 
+	></drct-station-listings-4r-recent-vcc>
+
+	<drct-station-listings-4r-top-vcc 
+		ng-if="atrbUse == 'AllStations'" 
+	></drct-station-listings-4r-top-vcc>
+</div>
+
+

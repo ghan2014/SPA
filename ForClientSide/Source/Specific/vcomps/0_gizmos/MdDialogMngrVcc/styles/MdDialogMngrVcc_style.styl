@@ -1,0 +1,208 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: MdDialogMngrVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-slide-down-vcc {
+	display: block;
+}
+
+/* make dialog box to be on the top */
+.md-dialog-container {
+ 	z-index: 1000
+}
+
+@require '../../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.MdDialogMngrVc_'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants} {
+		/* Layout */
+		padding: 0 20px 0 20px
+		width: 90vw
+		max-width: 350px
+		min-width: 210px
+		max-height: 85vh
+		overflow-y: auto;
+		
+		
+		/* Style */
+		background: linear-gradient(rgba(255, 255, 255, 1), rgba(102, 102, 102, 1)) 
+		
+	}
+
+
+	
+	
+
+@media $AppVcc_stndXSmMinBreakpoint  {
+
+		{$myVariants}  {
+			/* Layout */
+		}
+
+}
+
+
+@media $AppVcc_stndSmMinBreakpoint  {
+
+	{$myVariants}  {
+		/* Layout */
+	}
+
+}
+
+
+
+
+{$myElders}
+	{$myVariants}
+
+
+
+
+		.noticeType_success {
+			
+			margin-bottom: 20px
+			
+			/* Style */
+			color: $AppVCC_stndGreen
+			text-transform: capitalize
+			
+		}
+
+		.noticeType_error {
+			/* Layout */
+			margin-bottom: 20px
+			
+			/* Style */
+			color: $AppVcc_stndRed
+			text-transform: capitalize
+			
+		}
+		
+		.InfoCopy {
+			/* Layout */
+			margin-bottom: 20px
+		}
+
+		.Modal {
+			/* Layout */
+			width: 100%;
+			overflow: hidden;
+			
+			/* Style */
+			background-color: #aaa;
+			color: #fff;
+			
+			transition__: max-height 3.0s ease;
+		}
+
+		.ModalClose {
+			/* Layout */
+			max-height: 0px;
+			
+			/* Style */
+			border: solid 0px green;
+			
+			transition: max-height 1.0s ease-in-out, border 0.9s step-end;
+		}
+
+		.ModalOpen {
+			/* Layout */
+			max-height: 500px;
+			
+			/* Style */
+			border: solid 1px green;
+			
+			transition: max-height 1.0s ease-in-out, border 0.1s step-start;
+		}
+		
+
+		.md-title {
+			{$AppVcc_formishTitle}
+			margin-bottom: 15px;
+			padding-right: 15px
+		}
+
+
+
+		/* X mark to close dialog box */
+		.md-secondary.md-button {
+			/* Layout */	
+			position: absolute;
+			margin: 0;
+			top: 2px;
+			right: 1px;
+			min-width: 16px;
+			min-height: 16px;
+
+			/* Style */
+			font-size: 20px;
+			background-color: transparent;
+		}
+
+		.md-actions {
+			/* Layout */
+			margin: 0
+			padding: 0 0 10px 0
+			margin-bottom: 10px;
+		}
+
+		.md-button.md-primary {
+			{$AppVcc_proceedButton}
+		}
+
+		.md-button.md-primary:disabled {
+			{$AppVcc_proceedButtonDisabled}
+		}
+
+		.md-button.md-alternative {
+			/* Layout */
+			margin: 0 8px
+			padding: 0
+			word-wrap: break-word
+
+			/* Style */
+			{$AppVcc_formishFieldNoteAndLink}
+			background-color: transparent
+			text-transform: capitalize
+		}
+		
+		.md-button.md-alternative.DialogButtonLink
+			/* Layout */
+			/* Style */
+			white-space: normal
+			line-height: initial
+
+
+
+		
+		
+@media $AppVcc_stndSmMinBreakpoint  {
+	{$myElders} {
+		{$myVariants}  {
+			/* Layout */
+			max-height: 95vh
+
+			
+			.md-actions {
+				/* Layout */
+				padding: 0px 10px
+			}
+			.md-button.md-alternative {
+				/* Layout */
+				padding: 0 6px
+				
+				/* Style */
+			}
+		}
+	}
+}

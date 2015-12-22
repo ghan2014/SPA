@@ -1,0 +1,23 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: Page4rHomeVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	
+	<drct-stations-panel-vcc
+		data-stations_filter = '{{loc.stationsFilter}}'
+		data-displayed_panel_title = '{{loc.displayedPanelTitle}}'
+		data-go_dude = '{{loc.goDude}}'
+	>
+	<drct-stations-panel-vcc>
+	
+</div>
+

@@ -1,0 +1,41 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: Page4rStationDtlVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<article class="pageTypeArticle"
+		role="region"
+		aria-labeledby="information about {{loc.stationSyn}}"
+	>
+		<drct-station-info-panel-vcc
+			data-displayed_panel_title = '{{loc.displayedInfoPanelTitle}}'
+			data-playlists_filter = '{{loc.playlistsFilter}}'
+			data-station_id = '{{loc.stationId}}'
+			data-station_name = '{{loc.stationName}}'
+			data-go_dude = '{{loc.goDude}}'
+		>
+		</drct-station-info-panel-vcc>
+
+
+		<drct-playlists-panel-vcc
+			name = 'tc_listings1'
+			data-displayed_panel_title = '{{loc.displayedPlaylistsPanelTitle}}'
+			data-playlists_filter = '{{loc.playlistsFilter}}'
+			data-station_id = '{{loc.stationId}}'
+			data-station_name = '{{loc.stationName}}'
+			data-go_dude = '{{loc.goDude}}'
+		>
+		</drct-playlists-panel-vcc>
+
+	</article>
+
+
+</div>

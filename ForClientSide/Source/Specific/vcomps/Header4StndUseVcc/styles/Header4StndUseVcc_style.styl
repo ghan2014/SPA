@@ -1,0 +1,137 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: Header4StndUseVccLinkStyle.css
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-header-4-stnd-use-vcc {
+	display: block;
+}
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+
+$myVariants = '.Header4StndUseVcc'
+
+{$myVariants} {
+	/* Flex-box spcf */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	/* Layout */
+	width: 100%;
+	min-height: $AppVcc_Header4StndUseVcc_Height;
+
+	z-index: 1;
+	
+	/* Style */
+	color: #fff;
+	
+	
+	
+	.navTrigger, .navTrigger + label {
+		display: none;
+	}
+
+	.homePageLinkOnLogoImgWrapper {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.homePageLinkOnLogoImg {
+		/* Flex-child spcf */
+		align-self: left;
+		{$AppVcc_sprite-LiumeiTalk-Logo}
+	}
+	
+	.logoImg {
+		/* Style */
+		/* border: solid 1px #755; */
+		margin: auto;
+	}
+	
+	.navChoiceWrapper {
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.navChoices {
+		/* Flex-child spcf */
+		align-self: center;
+	
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;	
+		
+		/* Layout */
+		padding: 5px 10px;
+			
+		/* Style */
+		width: 100%;
+		background-color: $AppVcc_stndDkBlue;
+		box-shadow:  $AppVcc_stndOneUpBottomBorderShadow;
+		line-height: 30px
+	}
+	
+
+	
+	
+	.navChoice {
+		/* Flex-child spcf */
+		align-self: center;
+		
+		/* Layout */
+		display: block;
+		margin-left: 15px; 
+		padding-right: 15px; 
+		
+		/* Style */
+		color: $AppVcc_stndWhite;
+		border: none;
+		text-transform: uppercase;	
+		/* border-right: solid 1px #aaa; */
+		background-color: transparent;
+		outline: none;
+		cursor: pointer;
+	}
+	
+	.navChoice:hover {
+		/* Style */
+		text-decoration: underline
+	}
+	
+	.navChoice:last-child {
+		/* Layout */
+		display: block; 
+		padding-right: 0; 
+		
+		/* Style */	
+		border-right: none;
+	}
+	
+	.navChoiceLink:last-of-type {
+		/* Layout */
+		padding-right: 30px;
+		margin-right:15px;
+		/* Style */
+		border-right: $AppVcc_fadedGlyphishWhite
+	}
+	
+	.navChoiceMemberStuff {
+		/* Style */
+		font-weight: 200
+	}
+	
+	#navTrigger {
+		display: none;
+	}
+	
+}
+
+@require './Header4StndUseVccLink_menu_style.styl'	

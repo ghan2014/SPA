@@ -1,0 +1,62 @@
+<div>
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: ForgotPasswordPanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+
+
+	
+	<div class="form-info-text">We will need your email address in order to send you the password {{loc.remoteSessionId}}</div>
+
+
+	<ng-form class="StndLoginForm"
+			name="StndLoginForm"
+			novalidate		
+	>
+		
+		<fieldset>
+
+			
+			<div class="InnerFieldset">
+				
+				<div class="FieldSetItem">
+					<label for="LoginIdfier" class="sr-only">
+						Email Address
+					</label>
+					<input	type="email" 
+							id="LoginIdfier" 
+							class="form-input"
+							name="LoginIdfier" 
+							minlength="4"
+							maxlength="100"
+							required 
+							placeholder="Your Email Address"
+							ng-model="loc.loginIdfier" 
+					>
+					<div class="form_error">
+						 <div ng-if="StndLoginForm.LoginIdfier.$error.email">Invalid email address.</div>
+						 <div ng-if="StndLoginForm.LoginIdfier.$error.minlength">Input too short.</div>
+						 <div ng-if="StndLoginForm.LoginIdfier.$error.maxlength">Input too long.</div>
+					</div>
+				</div>
+				
+				<input type="hidden" name="handoffSpecId" value="{{loc.handoffSpecId}}">
+			</div>
+			
+			
+			
+		</fieldset>
+
+		
+
+	</ng-form>
+</div>
+</div>

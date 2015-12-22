@@ -1,0 +1,41 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: Button4rFacebookShareVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-button-4r-facebook-share-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.Button4rFacebookShareVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+		.shareTrigger
+			/* Style */
+			{$AppVcc_sprite-share_facebook}
+			border: none;
+			background-color: transparent;
+			border-radius: 50px /* Insure max curvature */
+
+		.shareTrigger:hover
+			{$AppVcc_triggerHoverEffect4rDarkishTrigger}
+		
+		.shareTrigger:active
+			{$AppVcc_triggerActiveEffect}
+			
+		
+		.shareTrigger:focus
+			outline: none;
+	
+	
+

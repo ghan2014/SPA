@@ -1,0 +1,34 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: OuterHolderVccLinkStyle.css
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-outer-holder-vcc,
+.drctOuterHolderVcc {
+	/** Layout **/
+	display: block;
+}
+
+/* Set to default state of everything to switched off. 
+ * Then have ui state switch on and configure as needed for them.
+ */
+.OuterHolderVcc
+	.OuterHolder_DnN1Slot {
+		display: block;
+	}
+
+.OuterHolderVcc
+	.OuterHolder_DnN2Slot {
+		display: block;
+		position: fixed;
+		bottom: 0px;
+		width: 100%
+	}
+
+
+
+

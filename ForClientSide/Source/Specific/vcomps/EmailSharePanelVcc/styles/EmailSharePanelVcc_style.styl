@@ -1,0 +1,64 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: EmailSharePanelVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-email-shared-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.EmailSharePanelVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+		
+
+		.ItemName_in_EmailShare  {
+			/* Layout */
+			display: inline-block
+			margin-bottom: 10px
+		}
+		
+		.ItemNameLabel_in_EmailShare {
+			/* Style */
+			text-transform: uppercase
+		}
+		
+		.ItemLogoImgHolder_in_EmailShare  {
+			/* Layout */
+			display: inline-block	
+		 	width: 150px
+		 	margin: 0 10px 10px 0	
+		 		
+		}
+
+		.ItemLogoImg_in_EmailShare {
+			/* Layout */
+		 	width: 150px	
+		}
+		.ItemDescription_in_EmailShare {
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+
+	
+
+.Header4StndUseVcc /* Elder */
+	.EmailSharePanelVcc {
+		
+		/* Style */
+		color: #fff;
+	}
+

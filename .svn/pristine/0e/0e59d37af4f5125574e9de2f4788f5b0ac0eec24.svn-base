@@ -1,0 +1,13 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: BodyContentHolderVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the {{datas.view.info.myname}} Tmplt.  Time: {{datas.view.info.time}}.</div>
+
+<div class="_holder vcBox"
+	data-ui-view='BodyContentHolderSlot' 
+>
+	This is the inside of {{datas.view.info.myname}} 
+</div>
+

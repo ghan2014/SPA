@@ -1,0 +1,42 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: Page4rPlaylistDtlVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+
+
+	<article class="pageTypeArticle"
+		role="region"
+		aria-labeledby="information about {{loc.playlistSyn}}"
+	>
+		<drct-playlist-info-panel-vcc
+			data-displayed_panel_title = '{{loc.displayedInfoPanelTitle}}'
+			data-playlist_id = '{{loc.playlistId}}'
+			data-playlist_name = '{{loc.playlistName}}'
+			data-station_id = '{{loc.stationId}}'
+			data-station_name = '{{loc.stationName}}'
+			data-tracks_filter = '{{loc.tracksFilter}}'	
+			data-go_dude = '{{loc.goDude}}'
+		>
+		</drct-playlist-info-panel-vcc>
+
+		<drct-tracks-panel-vcc
+			data-displayed_panel_title = '{{loc.displayedPlaylistsPanelTitle}}'
+			data-playlist_id = '{{loc.playlistId}}'
+			data-playlist_name = '{{loc.playlistName}}'
+			data-station_id = '{{loc.stationId}}'
+			data-station_name = '{{loc.stationName}}'
+			data-tracks_filter = '{{loc.tracksFilter}}'	
+			data-go_dude = '{{loc.goDude}}'
+		>
+		</drct-tracks-panel-vcc>
+	</article>
+</div>

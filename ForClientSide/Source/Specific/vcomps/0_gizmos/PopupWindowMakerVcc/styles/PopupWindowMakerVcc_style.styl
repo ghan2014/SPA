@@ -1,0 +1,147 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: PopupWindowMakerVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-popup-window-maker-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.PopupWindowMakerVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+	
+		.header_in_detail
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			
+			/* Layout */
+			height: 15vw;
+			min-height: 100px;
+			margin-top: -2vw;
+			padding: 0 10vw 2vw 10vw
+						
+			/* Style */
+			border__: solid 1px red
+			border-bottom: solid 2px black
+			
+		.logo_in_header_detail
+			/* Flex-child spcf */
+			order: 10;
+			
+			/* Layout */
+			margin-top: 2vw;
+			width: 15vw
+			height: 15vw
+			min-width: 100px;
+			min-height: 100px;
+			
+		.primaryZone_in_detail
+			/* Flex-child spcf */
+			order: 20;
+			flex: 1
+		
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			
+			
+			/* Layout */
+			width: 100%
+			height: 15vw
+			min-height: 100px;
+			padding: 20px 10px 20px 20px
+
+			/* Style */
+			border__: solid 1px blue
+			
+		.heading_in_detail
+			/* Flex-child spcf */
+			order: 10;
+			
+			/* Flex-box spcf */
+			display: flex;
+
+			/* Layout */
+			width__: 100%
+			
+			
+		.verticalDashboardRight_in_detail
+			/* Flex-child spcf */
+			order: 30;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			/* Layout */
+			padding: 20px 10px 20px 10px
+			height: 15vw
+			min-height: 100px;
+
+			/* Style */
+			border__: solid 1px blue
+
+
+			
+		.descriptionZone_in_detail
+			/* Flex-child spcf */
+			order: 20;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			/* Layout */
+			padding: 4vw 10vw 2vw 10vw
+			max-height: 270px
+			
+			/* Style */
+			border__: solid 1px orange
+			background-color: #aaaadd
+			
+		.descriptionParag_in_detail
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Layout */
+			display: block
+			height: 34px;
+			
+			
+			/* Style */
+			font-size: 13px;
+			border__: solid 1px green	
+
+			/* Layout addition for ellipses */
+			/* Ref: http://joelsaupe.com/programming/multiple-line-ellipsis-css/ */
+			
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+
+		.listings_in_detail
+			border__: solid 1px orange
+		
+			
+
+		
+

@@ -1,0 +1,187 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: AppVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+/**********************************************************************/
+@require './AppVcc_styleLib.styl'
+
+
+/**********************************************************************/
+
+* {
+	/** Layout **/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+
+section, main, article, nav, header, footer, fieldset, legend {
+	/** Layout **/
+	display: block;
+}
+
+h1, h2, h3, h4, h5 {
+	/** Layout **/
+	/** Style **/
+	font-weight: normal;
+}
+
+ul {
+	/** Style **/
+	list-style-type: none;
+}
+ 
+body {
+	/** Style **/
+	{ $AppVcc_stndText }
+}
+
+a {
+	/** Style **/
+	{ $AppVcc_stndLinkEffect } 
+}
+
+.whoAmI {
+	/** Layout **/
+	display: none;
+}
+ 
+.vcBox {
+	/** border: dotted 1px #b77; **/
+}
+
+
+
+
+fieldset {
+	/* Style */
+	border: none
+}
+
+
+input[type=text] {
+	{$AppVcc_formInput}
+	/* Style */
+	border-radius: 4px
+}
+input[type=password] {
+	{$AppVcc_formInput}
+	/* Style */
+	border-radius: 4px
+}
+input[type=email] {
+	{$AppVcc_formInput}
+	/* Style */
+	border-radius: 4px
+}
+input[type=checkbox] {
+	/* Style */
+	cursor: pointer
+}
+input[type=radio] {
+	/* Style */
+	cursor: pointer
+}
+select {
+	{$AppVcc_formInput}
+	/* Style */
+	cursor: pointer
+	border-radius: 4px
+}
+
+
+option {
+	{$AppVcc_formSelectOption}
+}
+
+/* DOESN'T SEEM TO WORK:
+option:checked {
+	{$AppVcc_formishFieldValuePlaceHolder}
+}
+*/
+
+
+
+.form-hr {
+	/* Layout */
+	margin: 15px 0 15px;
+}
+
+.form-hr-2 {
+	/* Layout */
+	margin: 15px 0 15px;
+}
+
+
+.form-info-text {
+	/* Layout */
+	margin-bottom: 15px
+	
+	/* Style */
+	$AppVcc_formishInfoText
+}
+
+
+.form-textarea {
+	/* Layout */
+	width: 100%;
+	height: 100px;
+	padding: 3px
+	
+	/* Style */
+	border-radius: 4px
+}
+
+.form-active-checkbox-label:hover
+	/* Style */
+	color: $AppVcc_stndDkBlackish
+	cursor: pointer
+
+
+.form_error {
+	{ $AppVcc_formishFieldErrorNote  }
+}
+
+.form_error_item {
+	/* Style */
+	margin-bottom: 5px
+}
+
+.form_error  .form_error_item:last-child {
+	/* Style */
+	margin-bottom: 0
+}
+
+
+.sr-only {
+	{$AppVcc_ScreenReaderOnly}   
+}
+
+
+.InnerFieldset {
+	/* Flex-box spcf */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+
+
+.FieldSetItem {
+	/* Layout */
+	margin:  15px 0 0 0
+}
+.FieldSetItem:first-child {
+	/* Layout */
+	margin-top:  0
+}
+
+
+
+/**********************************************************************/
+

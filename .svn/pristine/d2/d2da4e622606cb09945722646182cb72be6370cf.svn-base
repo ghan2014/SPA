@@ -1,0 +1,172 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: Header4StndUseVccLink_menu_style.styl yada
+ * *********************************************************************
+ * *********************************************************************
+ */
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+
+$myVariants = '.Header4StndUseVcc'
+
+/* Moblie view */ 
+@media (max-width: 767px) {
+    
+	{$myVariants} {
+		
+
+		.homePageLinkOnLogoImgWrapper {
+			/* Flex-box spcf */
+			flex-direction: column;
+		}
+		
+		.homePageLinkOnLogoImg {
+			/* Flex-child spcf */
+			align-self: flex-start;
+		}
+		
+		.navChoices {
+			/* Flex-child spcf */
+			order: 10;
+		
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			
+			/* Style */
+			width: 100%
+			height: auto;
+			z-index: 1;
+			margin: 0;
+			margin-right: -35px;
+			border__: solid 1px orange
+			box-shadow: AppVcc_stndOneUpBottomBorderShadow
+		}
+		
+		.navChoiceWrapper {
+			/* Flex-box spcf */
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-end
+			position: absolute;
+			width: calc(100% + 20px)
+			
+			/* Style */
+			background-color: $AppVcc_stndMdBlue
+			padding-right: 20px
+			margin-left: -20px;
+			border__: solid 1px cyan
+			box-shadow:  $AppVcc_stndOneUpBottomBorderShadow;
+		}
+		
+		.navChoice {
+			/* Flex-child spcf */
+			order: 20;
+			align-self: auto;
+			
+			/* Layout */
+			margin-left: 0; 
+			margin-top: 15px;
+			margin-bottom: 15px;
+			padding-right: 0; 
+			
+			/* Style */
+			border__: solid 1px blue;
+			text-align: left;
+			line-height: normal;
+			
+		}
+		
+		.navChoice:first-child {
+			/* Style */	
+			margin-top__: 10px;
+		}
+		
+		.navChoiceLink:last-of-type {
+			/* Layout */
+			padding-right: 0;
+			margin-right: 0;
+			/* Style */
+			border-right: none;
+		}
+		
+		.navTrigger {
+			/* Flex-child spcf */
+			order: 20;
+		}
+		
+		.navTrigger, .navTrigger + .navTriggerLabel {
+			display: block;
+		}
+
+		.navTriggerLabel {
+			/* Flex-child spcf */
+			order: 30;
+			
+			/* Layout */
+			/*
+			position: fixed;
+			top: 0px;
+			right: 6px;
+			*/
+			width: 30px;
+			height: 30px;
+			margin-right: 5px
+			
+			/* Style */
+			font-size: 190%;
+			cursor: pointer;
+			z-index: 2;
+		}
+		
+		
+
+		
+		.navTrigger:checked ~ .navChoices .navChoiceWrapper {
+			/* Layout */
+			max-height: 300px;
+			overflow: hidden;
+			transition: max-height ease-out 0.8s;
+		}
+		
+		.navTrigger:not(checked) ~ .navChoices .navChoiceWrapper {
+			/* Layout */
+			max-height: 0;
+			overflow: hidden;
+			/* Style */
+			transition: max-height ease-in 0.8s
+		}
+		
+		.navTrigger:checked + .navTriggerLabel:before {
+			/* Layout */
+		    line-height:200%;
+			margin-left:5px;
+			
+			/* Style */
+			content: "\0058"; /* X mark */
+			color: #d00;
+			font-size:100%;
+			transition-duration: 0.8s;
+			transform: rotate(180deg);
+		}
+	
+		.navTrigger:not(checked) + .navTriggerLabel:before {
+			/* Style */
+			content: "\2261"; /* hamburger */
+			color: #0d0;
+			font-size:140%;
+			transition-duration: 0.8s;
+		}
+		
+		
+		.navTrigger:checked ~ .__navChoices  {
+			/* Layout */
+			background: linear-gradient(to bottom, #000, #000, #ccc);
+		}
+		
+	}
+}

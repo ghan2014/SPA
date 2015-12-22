@@ -1,0 +1,32 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: PurposedPage4rStandalonesVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+	
+	<article class="standaloneContent" ng-switch on="loc.purposing.type">
+		
+		<div ng-switch-when="TOC" >
+			<!---
+			<ng-include src="'SymLinks/path-to-html-file-under-*deploy*-folder'"></ng-include>
+			--->
+		</div>
+		
+		<div ng-switch-when="EmailValidation">
+			<div class="contentInPage">
+			<p class="articleParag_in_page">Waystation Page for Email Address Confirmation.</p>
+			<p class="articleParag_in_page">If you are not redirected to another page, please again try clicking on the link in your inbox.</p>
+			</div>
+		</div>
+		
+	</article>
+
+
+</div>

@@ -1,0 +1,273 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: StationInfoPanelVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-station-info-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.StationInfoPanelVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+	
+		.header_in_detail
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			
+			/* Layout */
+			height: 25vw;
+			min-height: 100px;
+			margin-top: -20px;
+			margin-bottom: 40px;
+			padding: 10vw 0 2vw 10px
+						
+			/* Style */
+			border__: solid 1px red
+			{$AppVcc_bottomBorderOnCoverImage}
+
+			
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.header_in_detail {
+
+				/* Layout */
+				padding: 10vw 10vw 2vw 10vw
+			}
+		}
+		
+			
+		.logo_in_header_detail
+			/* Flex-child spcf */
+			order: 10;
+			
+			/* Layout */
+			margin-top: -3vw;
+			width: 20vw
+			height: 20vw
+			min-width: 115px;
+			min-height: 115px;
+			
+			/* Style */
+			{$AppVcc_detailLogoBorder}
+			
+	
+			
+		.primaryZone_in_detail
+			/* Flex-child spcf */
+			order: 20;
+			flex: 1
+		
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			
+			/* Layout */
+			width: 100%
+			height: 15vw
+			min-height__: 100px;
+			padding: 20px 10px 5px 15px
+
+			/* Style */
+			border__: solid 1px blue
+			
+			
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.primaryZone_in_detail {
+			
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+
+				/* Layout */
+				padding: 20px 10px 20px 20px
+			}
+		}
+		
+			
+		.heading_in_detail
+			/* Flex-child spcf */
+			order: 10;
+			
+			/* Flex-box spcf */
+			display: flex;
+
+			/* Layout */
+			width__: 100%
+			
+			/* Style */
+			{ $AppVcc_detailTitle }
+			{ $AppVcc_stndBigLightTextEffectWithShadow }
+			text-transform: uppercase
+	
+			border_: solid 1px yellow
+			
+			
+			
+		.verticalDashboardRight_in_detail
+			/* Flex-child spcf */
+			order: 30;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			/* Layout */
+			padding: 20px 0 25px 0px
+			height: 15vw
+			min-height__: 100px;
+
+			/* Style */
+			border__: solid 1px red
+
+
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.verticalDashboardRight_in_detail {
+
+				/* Layout */
+				padding: 20px 10px 25px 10px
+
+			}
+		}
+
+
+		.menuTrigger_in_detail
+
+			/* Layout */
+			margin-bottom: -14px
+			margin-right: -10px
+
+			/* Style */
+			border__: solid 1px red
+
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.menuTrigger_in_detail {
+
+				/* Layout */
+				margin-left: 0
+			}
+		}
+
+
+		.stats_in_detail
+			/* Flex-child spcf */
+			order: 20;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			/* Layout */
+			padding: 4vw 15px 0 15px	
+		
+		
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.stats_in_detail {
+
+				/* Layout */
+				padding: 4vw 10vw 0 10vw
+
+			}
+		}
+
+		.statsRow_in_detail
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between
+			
+
+		.statsItem_in_detail
+			/* Layout */
+			padding: 0 0 20px 0	
+			width: 200px
+			
+		.statsItemLabel_in_detail
+			/* Flex-child spcf */
+			order: 10;
+			
+			/* Style */
+			{$AppVcc_detailStatNvpLabel}
+	
+		
+		.statsItemValue_in_detail
+			/* Flex-child spcf */
+			order: 20;
+			
+			/* Style */
+			{$AppVcc_detailStatNvpValue}
+
+			
+			
+			
+		.description_in_detail
+			/* Flex-child spcf */
+			order: 20;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			/* Layout */
+			padding: 0 15px 20px 15px
+		
+		
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.description_in_detail {
+
+				/* Layout */
+				padding: 0 10vw 20px 10vw
+
+			}
+		}	
+
+
+		.descriptionLabel_in_detail
+			/* Flex-child spcf */
+			order: 10;
+			
+			/* Style */
+			{$AppVcc_detailStatNvpLabel}
+	
+	
+	
+		.descriptionCopy_in_detail
+			/* Flex-child spcf */
+			order: 20;
+
+			/* Style */
+			{$AppVcc_detailDescText}	
+
+			/* Layout addition for ellipses */
+			/* ...Ref: http://joelsaupe.com/programming/multiple-line-ellipsis-css/ */
+			/* NOT USED NOW ...
+			display: block;
+			height: 34px
+			width: 100%
+			
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			*/
+
+
+
+@require './StationInfoPanelVcc_stylemq.styl'

@@ -1,0 +1,32 @@
+<div>
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: SignupPanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+
+	<div class="form-info-text">Anyone can easily listen to your school's station and discover your school's unique programs and learning environment.</div>
+
+	<drct-facebook-login-button-vcc
+		class="SignupMode"
+		atrb-handoff-spec-id="{{loc.handoffSpecId}}"
+		data-go_dude = '{{loc.goDude}}'
+	></drct-facebook-login-button-vcc>
+	
+	<hr class="form-hr">
+	
+	<drct-signup-core-panel-vcc 
+		atrb-handoff-spec-id="{{loc.handoffSpecId}}"
+		data-go_dude = '{{loc.goDude}}'
+	>
+	</drct-signup-core-panel-vcc>
+
+</div>
+</div>

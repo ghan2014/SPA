@@ -1,0 +1,51 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: Footer4StndUseVccLinkStyle.css
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+ 
+drct-footer-4-stnd-use-vcc {
+	/* Flex-box spcf */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+		
+		
+	/** Layout **/
+	min-height: 55px;
+
+	/** Style **/
+	color: #aaa;
+	background-color: #333;
+}
+
+
+drct-footer-4-stnd-use-vcc .usAndCopyright{
+	/* Flex-child spcf */
+		order: 10;
+	/** Layout **/
+	text-align: center;
+
+}
+
+drct-footer-4-stnd-use-vcc .usAndCopyright .us {
+	/* Flex-child spcf */
+		order: 10;
+		
+	/** Layout **/
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+drct-footer-4-stnd-use-vcc .usAndCopyright .copyright {
+	/* Flex-child spcf */
+		order: 20;
+		
+	/** Layout **/
+	text-align: center;
+	margin-bottom: 5px;
+}

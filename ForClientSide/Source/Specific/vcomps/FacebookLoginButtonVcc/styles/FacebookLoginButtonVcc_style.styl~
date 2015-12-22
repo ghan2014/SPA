@@ -1,0 +1,62 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: LoginCorePanelVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-login-core-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.LoginCorePanelVcc'
+$myElders = '.Header4StndUseVcc, .SlideDownVcc'
+
+
+{$myElders}
+	{$myVariants}
+		fieldset {
+			
+			/* Layout */
+			padding: 5px 0;
+			
+			/* Style */
+			border: solid 1px #755;
+		}
+		
+		legend {
+			/* Layout */
+			padding: 0 5px;
+		}
+		
+		.InnerFieldset {
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+		}
+		
+		.FieldSetItem {
+			/* Layout */
+			margin: 0 5px;
+		}
+		
+		.StndLoginFormSubmitButton {
+			/* Layout */
+			height: 20px;
+		}
+	
+
+.Header4StndUseVcc /* Elder */
+	.LoginCorePanelVcc {
+		
+		/* Style */
+		color: #fff;
+	}
+

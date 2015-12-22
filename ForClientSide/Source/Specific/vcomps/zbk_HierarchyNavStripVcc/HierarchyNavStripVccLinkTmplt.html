@@ -1,0 +1,26 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: HierarchyNavStripVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+
+<div class="HierarchyNavStripVcc vcBox"> 
+	<div class="displaySwitch"
+		ng-if="loc.okToShow"
+	>
+
+		<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+		
+			<nav>
+
+				<a class="navStripLink" 
+					ng-repeat="LoopItem_ in loc.linksDatas"   
+					href="{{LoopItem_.linkHref}}"
+				>
+					{{LoopItem_.linkCopy}}
+				</a>
+			
+			</nav>
+	</div>
+</div>
+

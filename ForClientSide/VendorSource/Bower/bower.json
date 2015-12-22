@@ -1,0 +1,29 @@
+{
+  "name": "Deployables",
+  "version": "0.0.0",
+  "authors": [
+    "webdev <webdev@live365.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery-2.1.4.min": "http://code.jquery.com/jquery-2.1.4.min.js",
+    "angular": "~1.4.3",
+    "angular-material": "~0.10.1",
+    "angular-slick": "~0.2.1",
+    "angular-resource": "~1.4.3",
+    "angular-lazy-img": "~1.0.2",
+    "ng-multi-transclude": "~0.1.5",
+    "angular-socialshare": "~1.4.1",
+    "angular-cookies": "~1.4.4"
+  },
+  "resolutions": {
+    "angular": "1.4.4"
+  }
+}

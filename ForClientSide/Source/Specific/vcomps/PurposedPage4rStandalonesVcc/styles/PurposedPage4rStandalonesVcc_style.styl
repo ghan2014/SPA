@@ -1,0 +1,97 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: PurposedPage4rStandalonesVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-purposed-page-4r-standalones-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.PurposedPage4rStandalonesVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+		.articleInPage
+			/* Layout */
+			margin: 30px 10vw 30px 10vw
+			
+		.contentInPage
+			/* Layout */
+			margin: 30px 10vw 30px 10vw	
+		
+		.articleHeader_in_page
+			/* Layout */
+			margin-bottom: 20px
+	
+		.articleHeading_in_page
+			/* Style */
+			{$AppVcc_proseishPageTitle}
+		
+		.articleBody_in_page
+			/* Layout */
+			margin-bottom: 0
+		
+		.articleSection_in_page
+			/* Layout */
+			margin-bottom: 20px
+			
+		.articleSection_in_page:last-child
+			/* Layout */
+			margin-bottom: 0px
+			
+			
+		.articleSectionHeader_in_page
+			/* Layout */
+			margin-bottom: 15px
+		
+		.articleSectionHeading_in_page
+			/* Style */
+			{$AppVcc_proseishPageSectionTitle}
+		
+		.articleSectionBody_in_page
+			/* Layout */
+			margin: 0
+		
+		
+		.articleParag_in_page
+			/* Layout */
+			margin-bottom: 10px
+			
+			/* Style */
+			{$AppVcc_proseishPageProse}
+			
+		.articleParag_in_page:last-child
+			/* Layout */
+			margin-bottom: 0px
+			
+	
+	/*
+	<header class="articleHeader_in_page">
+		<h1 class="articleHeading_in_page">
+				Terms And Conditions (Heading)
+		</h1>
+	</header>
+
+	<div class="articleBody_in_page">
+		<section class="articleSection_in_page">	
+			<h1 class="articleSectionHeading_in_page">
+				Section-1 Heading
+			</h1>
+			<div class="articleSectionBody_in_page">
+				<p class="articleParag_in_page">
+					Section-1 Parag-1
+				</p>
+			</div>
+		<section>
+	</div>
+	*/
+

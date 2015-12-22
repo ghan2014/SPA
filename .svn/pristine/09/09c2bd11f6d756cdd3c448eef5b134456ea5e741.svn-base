@@ -1,0 +1,113 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: StationInfoPanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+	<section class="detailSection"
+		role="region"
+		aria-labeledby="Information about {{loc.stationSyn}}"
+	>
+		
+		<header class="header_in_detail"
+			style = 'background: url({{loc.banners.banner.imageUrls[0]}}); background-size: 100% 100%; background-repeat: no-repeat;'
+		>
+			<img class="logo_in_header_detail" 
+				src="{{loc.details.logoUrl}}"
+				alt="Logo for {{loc.stationSyn}} named {{loc.details.title}}"
+			>
+			
+			<div class="primaryZone_in_detail"> 
+				<h1 class="heading_in_detail">
+						{{loc.details.title}}
+				</h1>
+			</div>
+
+			<div class="verticalDashboardRight_in_detail"
+				ng-if="loc.hasSession"
+			>
+				<drct-menu-items-holder-with-trigger-vcc
+					class="menuTrigger_in_detail"
+					data-aria_labeling = 'Options menu for this {{loc.stationSyn}}.'
+					data-instance_idfier = '{{loc.myVcName}}'
+					data-go_dude = 'truee'
+					
+				>
+					<md-menu-item>
+						<drct-button-4r-facebook-share-vcc
+							data-purposing = '{
+								"itemType": "Station",
+								"stationId": "{{loc.stationId}}"
+							}'
+							data-go_dude = 'truee'
+						></drct-button-4r-facebook-share-vcc>
+					</md-menu-item>
+					
+
+					<md-menu-item>
+						<drct-button-4r-email-share-vcc
+							data-purposing = '{
+								"itemType": "Station",
+								"stationId": "{{loc.stationId}}"
+							}'
+							data-go_dude = 'truee'
+						></drct-button-4r-email-share-vcc>
+					</md-menu-item>
+					
+				</drct-menu-items-holder-with-trigger-vcc>
+			</div>
+
+		</header>
+		<div class="stats_in_detail">
+
+			<div class="statsRow_in_detail">
+
+				<div class="statsItem_in_detail">
+					<p class="statsItemLabel_in_detail">Address: </p>
+					<p class="statsItemValue_in_detail">{{loc.details.address}} {{loc.details.city}} {{loc.details.state}}</p>
+				</div>
+				<div class="statsItem_in_detail">
+					<p class="statsItemLabel_in_detail">School Website:</p>
+					<p class="statsItemValue_in_detail"><a href="{{loc.details.websiteUrl}}" target="_blank">{{loc.details.websiteUrl}}</a></p>
+				</div>
+				<div class="statsItem_in_detail">
+					<p class="statsItemLabel_in_detail">Grades Offered:</p>
+					<p class="statsItemValue_in_detail">{{loc.details.enrollmentGrades}}</p>
+				</div>
+
+			</div>
+
+			<div class="statsRow_in_detail">
+				
+				<div class="statsItem_in_detail">
+					<p class="statsItemLabel_in_detail">Total Enrollment:</p>
+					<p class="statsItemValue_in_detail">{{loc.details.enrollmentStudents}}</p>
+				</div>
+				<div class="statsItem_in_detail">
+					<p class="statsItemLabel_in_detail">Gender:</p>
+					<p class="statsItemValue_in_detail">{{loc.details.enrollmentGender}}</p>
+				</div>
+				<div class="statsItem_in_detail">
+					<p class="statsItemLabel_in_detail">Type of School:</p>
+					<p class="statsItemValue_in_detail">{{loc.details.enrollmentType}}</p>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="description_in_detail">
+			<p class="descriptionLabel_in_detail">Description:</p>
+			<p class="descriptionCopy_in_detail">{{loc.details.description}}</p>
+		</div>
+
+
+		</div>
+
+	</section>
+</div>

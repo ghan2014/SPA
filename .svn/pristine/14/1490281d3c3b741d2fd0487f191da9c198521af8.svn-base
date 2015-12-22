@@ -1,0 +1,87 @@
+/*
+ * ***********************************
+ * ***********************************
+ * ***********************************
+ * File: Footer4StndUseVcc_style.styl
+ * ***********************************
+ * ***********************************
+ */
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+
+
+drct-footer-4-stnd-use-vcc {
+	display: block;
+}
+
+
+$myVariants = '.Footer4StndUseVcc'
+
+
+{$myVariants} 
+
+	/* Flex-box spcf */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+		
+		
+	/* Layout */
+	min-height: 55px;
+
+	/* Style */
+	background-color: $AppVcc_stndDkBlue
+
+	
+
+	.statement_in_footer
+		/* Flex-child spcf */
+		order: 10;
+			
+		/* Layout */
+		text-align: center;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		
+		/* Style */
+		font-size: $AppVcc_stndSmallishFontSize
+		color: $AppVcc_stndWhite
+		
+
+
+
+	.linksList_in_footer
+		/* Flex-child spcf */
+		order: 20;
+			
+		/* Style */
+		text-align: center;
+		margin-bottom: 5px;
+		color: $AppVcc_stndWhite
+		
+
+
+	.link_in_statement
+		/* Style */
+		text-decoration: underline;
+		color: $AppVcc_stndWhite;
+
+				
+	.link_in_linksList
+		/* Layout */
+		padding: 0 10px 2px 10px
+		
+		/* Style */
+		font-size: $AppVcc_stndSmallishFontSize
+		text-decoration: underline;
+		color: $AppVcc_stndWhite;
+		border-right: $AppVcc_fadedGlyphishWhite;
+
+	.link_in_linksList:last-child
+		/* Layout */
+		
+		/* Style */
+
+		border-right: none

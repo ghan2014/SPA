@@ -1,0 +1,47 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: SlideDownVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+
+	<div class="SlideDownPanel {{loc.panelActionClassName}}">
+		<div class="SlideDownContents" ng-switch on="loc.drctName">
+			
+			<drct-facebook-login-button-vcc
+				ng-switch-when="LoginCorePanelVcc"
+				atrb-handoff-spec-id="{{loc.handoffSpecId}}"
+			></drct-facebook-login-button-vcc>
+			
+			<drct-login-core-panel-vcc 
+				ng-switch-when="LoginCorePanelVcc"
+				atrb-handoff-spec-id="{{loc.handoffSpecId}}"
+			>
+			</drct-login-core-panel-vcc>
+			
+			<drct-signup-panel-vcc 
+				ng-switch-when="SignupPanelVcc"
+				atrb-handoff-spec-id="{{loc.handoffSpecId}}"
+			>
+			</drct-signup-panel-vcc>
+			
+			<div 
+				ng-switch-when=""
+			>
+			</div>
+			
+			<div 
+				ng-switch-default
+			>
+			</div>
+			
+		</div>
+	</div>
+</div>
+

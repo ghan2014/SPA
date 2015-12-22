@@ -1,0 +1,29 @@
+<div>
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: LoginPanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+
+
+	<drct-facebook-login-button-vcc
+		atrb-handoff-spec-id="{{loc.handoffSpecId}}"
+		data-go_dude = '{{loc.goDude}}'
+	></drct-facebook-login-button-vcc>
+	
+	<hr class="form-hr">
+	
+	<drct-login-core-panel-vcc 
+		atrb-handoff-spec-id="{{loc.handoffSpecId}}"
+	>
+	</drct-login-core-panel-vcc>
+
+</div>
+</div>

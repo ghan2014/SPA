@@ -1,0 +1,12 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: StateContainerVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+<div class="{{ssvv.myCssName}} vcBox">
+	<div class="whoAmI">This is the {{datas.view.info.myname}} Tmplt.  Time: {{datas.view.info.time}}.</div>
+	
+	<div class="{{ssvv.abstractStatesCssNames}} _holder"
+		data-ui-view='HtmlSlot' 
+	></div>
+</div>

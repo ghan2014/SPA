@@ -1,0 +1,291 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: PlaylistsPanelVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-playlists-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.PlaylistsPanelVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+		/* Layout */
+		padding-top: 20px;
+		padding-bottom: 40px;
+		
+		/* Style */
+		background-color: $AppVcc_bigPanelBgColor
+		
+
+		.listingsBox
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap
+			justify-content: center;
+			align-items: center;
+
+			/* Style */	
+			border__: solid 1px green
+			
+		
+		.listingItem
+			/* Flex-child spcf */
+
+			/* Layout */
+			height: 185px;
+			width: 450px;
+			margin: 15px
+
+			
+			/* Style */
+			background-color: $AppVcc_stndWhite
+			{$AppVcc_listingBorder}
+			
+			
+		.listingItem:hover
+			border-color: $AppVcc_stndLinkHoverColor
+			
+		.listingItem:active
+			border-color: $AppVcc_stndLinkActiveColor
+			
+			
+			
+		.link_on_listingContent
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			
+			/* Style */
+			color: #000;
+			text-decoration: none;	
+			
+			
+			
+		.header_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			
+			/* Layout */
+			width: 100%;
+			overflow: hidden;
+			
+			/* Style */
+			border__: solid 1px red
+
+			
+
+		.imageAndButtonHolder_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Layout */
+			position:relative
+			height: 115px;
+			width: 115px;
+			margin: 5px 0 0 5px
+			
+
+		
+		.image_in_listing			
+			/* Layout */
+			height: 115px;
+			width: 115px;
+			
+			/* Style */
+			{$AppVcc_borderOnThumbImage}
+			
+			
+		.playbuttonBox_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Flex-box spcf */
+			display: block
+			
+			/* Layout */
+			position: absolute
+			top: 70px
+			left: 70px
+				
+
+			/* Style */
+			border__: solid 1px red
+			
+			
+		.primaryZone_in_listing
+			/* Flex-child spcf */
+			order: 20;
+			flex: 1;
+		
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			
+			/* Layout */
+			padding: 20px 10px 17px 10px	
+											
+
+			/* Style */
+			background-color__: #eee;
+			border__: solid 1px blue
+
+
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.primaryZone_in_listing {
+
+				/* Layout */
+				padding: 20px 10px 17px 20px
+			}
+		}
+
+
+
+		.heading_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Flex-box spcf */
+			display: flex;
+
+			/* Layout */
+			padding: 0 0 5px 0	/* Joins to top padding of .dashboard_in_listing */
+			
+			/* Style */
+			{$AppVcc_listingTitle}
+
+		
+
+		.headingCopy_in_listing__		
+			/* Flex-child spcf */
+			order: 10;
+			
+			/* Layout */
+			display: block
+
+			/* Style */
+			font-size: 15px
+			font-weight: 600
+
+
+
+
+		.dashboard_in_listing
+			/* Flex-child spcf */
+			order: 20;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			
+			/* Layout */
+			padding: 5px 0 0 0	/* Joins to bottom padding of .heading_in_listing */
+			
+			/* Style */
+			border__: solid 1px green
+			
+
+			
+		.trackLength_in_listing
+			/* Flex-child spcf */
+			order: 10;
+			
+			/* Style */
+			{$AppVcc_listingStatAloneValue}
+			
+			
+			
+		
+		.verticalDashboardRight_in_listing
+			/* Flex-child spcf */
+			order: 30;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			/* Layout */
+			padding: 20px 10px 13px 10px
+
+			/* Style */
+			background-color__: #eee;
+			border__: solid 1px blue
+		
+
+		.ontoPageArrowHolder_in_listing
+			/* Layout */
+			margin-top: 2px;
+			
+			/* Style */
+			{$AppVcc_sprite-onto-page-arrow}
+			border: none;
+			background-color: transparent;
+			border-radius: 50px /* Insure max curvature */
+
+
+
+		.listingItem:hover .ontoPageArrowHolder_in_listing
+			{$AppVcc_ontoHoverEffect4rTrigger }
+		
+		.listingItem:active .ontoPageArrowHolder_in_listing
+			{$AppVcc_ontoActiveEffect4rTrigger }
+
+
+
+
+		.descriptionZone_in_listing
+			/* Flex-child spcf */
+			order: 20;
+
+			
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			
+			/* Layout */
+			padding: 15px 20px 15px 20px
+			
+			/* Style */
+			border__: solid 1px orange		
+
+		.descriptionCopy_in_listing 
+			/* Flex-child spcf */
+			order: 10;
+		
+			/* Layout */
+			display: block;
+			height: 34px;
+			
+			/* Style */
+			font-size: 13px;
+			border__: solid 1px green	
+
+			/* Layout addition for ellipses */
+			/* Ref: http://joelsaupe.com/programming/multiple-line-ellipsis-css/ */
+			
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		

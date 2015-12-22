@@ -1,0 +1,13 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: MastheadPanelVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the {{datas.view.info.myname}} Tmplt. </div>
+
+<div class="{{datas.view.info.myname}} vcBox"  >
+
+	<div class="mastheadImg"></div>
+
+</div>
+

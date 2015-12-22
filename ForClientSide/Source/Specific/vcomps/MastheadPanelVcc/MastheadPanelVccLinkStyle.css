@@ -1,0 +1,30 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: MastheadPanelVccLinkStyle.css
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-masthead-panel-vcc {
+	/** Layout **/
+	display: block;
+	width: calc(100%);
+    padding:0;
+    text-align: left;
+    position: relative;
+    /** Style **/
+}
+
+
+drct-masthead-panel-vcc .mastheadImg {
+	/** Layout **/
+	display: block;
+    width: 100%;
+    height: calc(100% * (1 / 4) );
+    max-height: 200px;
+    margin-bottom: 0;
+	padding-bottom: 0;
+	border__: solid 1px red;
+}

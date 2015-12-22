@@ -1,0 +1,28 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: StateContainerVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+<div class="StateContainerVcc vcBox">
+	<div class="whoAmI">This is the {{datas.view.info.myname}} Tmplt.  Time: {{datas.view.info.time}}.</div>
+	
+	<div class="_holder"
+		data-ui-view='CssSlot_forStateWithUrl' 
+	>
+	<div class="_holder"
+		data-ui-view='CssSlot_forStateWithoutUrl' 
+	>
+	
+	<div class="_holder"
+		data-ui-view='JsSlot_forStateWithUrl' 
+	>
+	<div class="_holder"
+		data-ui-view='JsSlot_forStateWithoutUrl' 
+	>
+	
+	<div class="_holder"
+		data-ui-view='HtmlSlot_forStateWithUrl' 
+	>
+
+</div>
+

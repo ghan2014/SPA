@@ -1,0 +1,77 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: Header4StndUseVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the {{datas.view.info.myname}} Tmplt. </div>
+<div  class="Header4StndUseVcc vcBox">
+	
+	<!-- burger -->
+	<input class="navTrigger" id="navTrigger"  type="checkbox" >
+	<label class="navTriggerLabel" for="navTrigger"><span></span></label>
+
+	<nav class="navChoices">
+	
+		<div class="homePageLinkOnLogoImgWrapper">
+			<a class="homePageLinkOnLogoImg"  href="home" title="Home">
+				<!-- <img class="logoImg" src="%2FAssets/Media/ImgGraphics/Liumei_Logo.png" alt="Logo image for header"> -->
+			</a>
+		</div>
+		
+		<div>
+			{{loc.responseMssg}}
+		</div>
+		
+		<div class="navChoiceWrapper">
+			
+			<a class="navChoice navChoiceLink" href="http://www.liumei365.com/" target="_blank">benefits</a>
+			<a class="navChoice navChoiceLink" href="http://www.liumei365.com/features/" target="_blank">features</a>
+			<a class="navChoice navChoiceLink" href="http://www.liumei365.com/download/ " target="_blank">download</a>
+			
+
+			<button class="navChoice navChoiceMemberStuff navChoiceLogin"
+				ng-if="!loc.isLoggedInUser"
+				data-drct_click_to_mediator_adc = '{
+					"notice": {
+						"noticeName": "LoginButton_clicked",
+						"vc": "Header4StndUseVcc",
+						"context": ""
+					}
+				}'
+			>
+				login
+			</button>	
+			
+
+			<button class="navChoice navChoiceMemberStuff navChoiceLogout"
+				ng-if="loc.isLoggedInUser"
+				
+				data-drct_click_to_mediator_adc = '{
+					"notice": {
+						"noticeName": "LogoutButton_clicked",
+						"vc": "Header4StndUseVcc",
+						"context": ""
+					}
+				}'
+			>
+				logout
+			</button>
+			
+			<button class="navChoice navChoiceMemberStuff navChoiceSignup"
+				ng-if="!loc.isLoggedInUser"
+				data-drct_click_to_mediator_adc = '{
+					"notice": {
+						"noticeName": "SignupButton_clicked",
+						"vc": "Header4StndUseVcc",
+						"context": ""
+					}
+				}'
+			>
+				sign up now
+			</button>
+		
+		</div> <!-- navChoiceWrapper end -->
+	
+	</nav>
+	
+</div>

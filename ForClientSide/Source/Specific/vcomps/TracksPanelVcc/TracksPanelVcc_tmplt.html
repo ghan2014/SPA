@@ -1,0 +1,192 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: TracksPanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+	<style>
+		.listingContent_4r_loadedTrack {
+			background-color: #eee;
+		}
+	</style>
+
+	<section class="listings_in_detail"
+		role="region"
+		aria-label="{{loc.trackSyn}} listings for this {{loc.playlistSyn}}"
+	>
+
+		<nav class="listingsNav">
+			<ul class="listingsBox"	
+				data-drct_click_to_mediator_adc = '{
+					"pkgTags": [".primaryZone_in_listing, .PlayButtonVccTrigger, .logo_in_listing"],
+					"doBubble": "true"
+				}'
+			>
+				
+				<li class="listingItem" 
+					ng-repeat="Listing_ in loc.listings"   
+					id="listing_{{Listing_.id}}"
+				>
+
+					<div  class=" listingContent  trackFocusKey__{{Listing_.id}} {{ 'listingContent_4r_loadedTrack' | ifThis : Listing_.id : 'eq' : loc.loadedTrackUid}}">
+
+						<div class="primaryZone_in_listing"
+							id="primaryZone_in_listing_{{Listing_.id}}"
+
+							data-pkg = '{
+								"notice": {
+									"noticeName": "PlayTriggerZone_clicked",
+									"context": "",
+									"playlistId": "{{Listing_.playlistId}}",
+									"stationId": "{{Listing_.stationId}}",
+									"trackId": "{{Listing_.trackId}}",
+									"trackUid": "{{Listing_.id}}",
+									"triggerTagToUse": "listingContent_{{Listing_.id}}"
+								}
+							}'
+
+						> 
+
+							<header class="header_in_listing">
+								<h1 class="heading_in_listing">
+									{{Listing_.title}} 
+								</h1>
+							</header>
+
+							<div class="dashboard_in_listing">
+								<div class="artistMeta_in_listing">
+									<span class="artistMetaCopy_in_listing">
+										{{Listing_.artist}}
+									</span>
+
+								</div>
+								<div class="durationMeta_in_listing">
+									<span class="durationMetaCopy_in_listing">
+										{{Listing_.playTimeMSec |  millisToHhMmSs}}
+									</span>
+								</div>
+							</div>
+							
+							
+							<div class="descriptionZone_in_listing">
+								<p class="descriptionCopy_in_listing">
+									{{Listing_.description}}
+								</p>
+							</div>
+						</div>
+						<!---
+						<div class="verticalDashboardLeft_in_listing">
+							<aside class="playbuttonBox_in_listing transcludeSlot"
+								role="complementary"
+							>
+								<drct-play-button-vcc
+									data-aria_labeling = 'Button to play tracks for this project'
+									data-instance_idfier = '{{loc.myVcName}}_{{$index}}'
+									data-playlist_id = '{{Listing_.playlistId}}'
+									data-station_id = '{{Listing_.stationId}}'
+									data-track_id = '{{Listing_.trackId}}'
+									data-track_uid = '{{Listing_.id}}'
+									data-go_dude = 'truee'
+								>
+								</drct-play-button-vcc>
+			
+							</aside>
+						</div>
+						---->
+						<div class="verticalDashboardRight_in_listing">
+							<drct-menu-items-holder-with-trigger-vcc
+								data-aria_labeling = 'Options menu for this {{loc.trackSyn}}.'
+								data-instance_idfier = '{{loc.myVcName}}'
+								data-go_dude = 'truee'
+							>
+								<md-menu-item>
+									<drct-button-4r-facebook-share-vcc
+										data-purposing = '{
+											"itemType": "Track",
+											"trackUid": "{{Listing_.id}}",
+											"trackId": "{{Listing_.trackId}}",
+											"playlistId": "{{Listing_.playlistId}}",
+											"stationId": "{{Listing_.stationId}}"
+										}'
+										data-go_dude = 'truee'
+									></drct-button-4r-facebook-share-vcc>
+								</md-menu-item>
+
+								<md-menu-item>
+									<drct-button-4r-email-share-vcc
+										data-purposing = '{
+											"itemType": "Track",
+											"trackUid": "{{Listing_.id}}",
+											"trackId": "{{Listing_.trackId}}",
+											"playlistId": "{{loc.playlistId}}",
+											"stationId": "{{loc.stationId}}"
+										}'
+										data-go_dude = 'truee'
+									></drct-button-4r-email-share-vcc>
+								</md-menu-item>
+
+								<md-menu-item>
+									<drct-button-4r-email-report-vcc
+										data-purposing = '{
+											"itemType": "Track",
+											"trackUid": "{{Listing_.id}}",
+											"trackId": "{{Listing_.trackId}}",
+											"playlistId": "{{loc.playlistId}}",
+											"stationId": "{{loc.stationId}}"
+										}'
+										data-go_dude = 'truee'
+									></drct-button-4r-email-report-vcc>
+								</md-menu-item>
+							</drct-menu-items-holder-with-trigger-vcc>
+						</div>
+						<div class="imageAndButtonHolder_in_listing">
+							<img class="logo_in_listing" 
+								src="{{Listing_.imageThumbURL}}"
+								alt="Logo for {{loc.trackSyn}} named {{Listing_.title}}"
+
+								id="logo_in_listing_{{Listing_.id}}"
+
+								data-pkg = '{
+									"notice": {
+										"noticeName": "PlayTriggerZone_clicked",
+										"context": "",
+										"playlistId": "{{Listing_.playlistId}}",
+										"stationId": "{{Listing_.stationId}}",
+										"trackId": "{{Listing_.trackId}}",
+										"trackUid": "{{Listing_.id}}",
+										"triggerTagToUse": "listingContent_{{Listing_.id}}"
+									}
+								}'
+							>
+							<aside class="playbuttonBox_in_listing transcludeSlot"
+								role="complementary"
+							>
+								<drct-play-button-vcc
+									class = 'drctPlayButtonVcc'
+									data-aria_labeling = 'Button to play tracks for this project'
+									data-instance_idfier = '{{loc.myVcName}}_{{$index}}'
+									data-playlist_id = '{{Listing_.playlistId}}'
+									data-station_id = '{{Listing_.stationId}}'
+									data-track_id = '{{Listing_.trackId}}'
+									data-track_uid = '{{Listing_.id}}'
+									data-go_dude = 'truee'
+								>
+								</drct-play-button-vcc>
+							</aside>
+						</div>
+
+					</div>
+
+					
+				</li>
+			</ul>
+		</nav>
+	</section>
+	
+</div>

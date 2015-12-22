@@ -1,0 +1,70 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: Page4rPasswordResetVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-page-4r-password-reset-vcc {
+	display: block;
+}
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.Page4rPasswordResetVcc'
+$myElders = ''
+
+
+
+{$myElders}
+	{$myVariants}
+	
+		/* Layout */
+		margin: 30px auto 30px auto
+		max-width: 350px
+		min-width: 210px
+		min-height: 250px
+		width: 99vw
+		
+		/* Style */
+		background: linear-gradient(rgba(255, 255, 255, 1), rgba(102, 102, 102, 1)) 
+
+		.form-container 
+			padding: 30px
+		
+		.ButtonContainer{
+			/* Flex-box spcf */
+			display: flex
+			justify-content: flex-end
+			
+			/* Layout */
+			margin-top: 50px
+			border__: solid 1px red
+		}
+		
+		.StatusMessage {
+			/* Layout */
+			font-weight: 6oo
+			
+			/* Style */
+			padding: 20px 10px 0 10px
+		}
+		
+		.md-button.md-primary {
+		     {$AppVcc_proceedButton}
+		}
+		
+		
+		.md-button.md-primary:disabled {
+			{$AppVcc_proceedButtonDisabled}
+		}
+
+
+		.articleHeading_in_page
+			/* Layout */
+			margin-bottom: 20px
+			
+			/* Style */
+			{$AppVcc_formishTitle}

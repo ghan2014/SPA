@@ -1,0 +1,48 @@
+<div>
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: EmailReportPanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+
+	<div class="form-info-text">Please tell us why you are flagging this {{loc.type}} for review. Be as specific as possible.</div>
+
+	<ng-form class="StndEmailForm"
+			name="StndEmailForm"
+			novalidate		
+	>
+		
+		<fieldset>
+			
+			<div class="InnerFieldset">
+
+				<div class="FieldSetItem">
+					<label for="EmailMessage" class="sr-only">
+						Send Report
+					</label>
+
+					<textarea ng-model="loc.inputComment" ng-trim="false" minlength="4" maxlength="200" required  class="form-textarea" name="EmailMessage" id="EmailMessage" placeholder="Message"></textarea>
+					<div class="CharactersLeft">{{200 - loc.inputComment.length}} characters left</div>
+					<div class="form_error" ng-if="StndEmailForm.EmailMessage.$error.minlength">Input too short.</div>
+					 
+				</div>
+
+				<input type="hidden" name="handoffSpecId" value="{{loc.handoffSpecId}}">
+			</div>
+			
+			
+			
+		</fieldset>
+
+		
+
+	</ng-form>
+</div>
+</div>

@@ -1,0 +1,70 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: SharePanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+	<article class="articleDetail"
+		role="region"
+		aria-labeledby="Information about school"
+	>
+		
+		<header class="header_in_detail"
+			style = '
+				background: url(http://dummyimage.com/2000x5:1/444488/444455&text=Masthead img - {{loc.details.title}});
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			'
+		
+		>
+			<img class="logo_in_header_detail" 
+				src="{{loc.details.logoUrl}}"
+				alt="Logo for school named {{loc.details.title}}"
+			>
+			
+			<div class="primaryZone_in_detail"> 
+				<h1 class="heading_in_detail">
+		
+						{{loc.details.title}}
+				
+				</h1>
+			</div>
+
+			<div class="verticalDashboardRight_in_detail">
+				<button class="utilsTrigger_in_detail">
+					:
+				</button>
+			</div>
+
+		</header>
+		<div class="descriptionZone_in_detail">
+			<p class="descriptionParag_in_detail">
+				{{loc.details.description}}
+			</p>
+		</div>
+
+
+		<section class="listings_in_detail transcludeSlot"
+			role="region"
+			aria-label="Project listings for this school"
+		>
+			<drct-playlists-panel-vcc
+				name = 'tc_listings1'
+				data-displayed_panel_title = '{{loc.displayedPlaylistsPanelTitle}}'
+				data-playlists_filter = '{{loc.playlistsFilter}}'
+				data-station_id = '{{loc.stationId}}'
+				data-station_name = '{{loc.stationName}}'
+				data-go_dude = '{{loc.goDude}}'
+			>
+			</drct-playlists-panel-vcc>
+		</section>
+	
+	</article>
+	
+</div>

@@ -1,0 +1,32 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: MenuItemsHolderWithTriggerVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+>
+
+
+	<md-menu 
+		md-offset="-45 0"
+		md-position-mode="target-right target"
+	>
+		<md-button 
+			class="md-icon-button myMdIconButton"
+			aria-label="{{loc.ariaLabeling}}"  
+			data-instance_idfier = '{{loc.instanceIdfier}}'
+			ng-click="thisc.openMenu($mdOpenMenu, $event)"
+		>
+		</md-button>
+		<md-menu-content class="MenuContent4r{{loc.instanceIdfier}}">
+			<div ng-transclude></div>
+		</md-menu-content>
+	</md-menu>
+
+	
+</div>
+

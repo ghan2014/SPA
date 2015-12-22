@@ -1,0 +1,54 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: SlideDownVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-slide-down-vcc {
+	display: block;
+}
+
+
+@require '../../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.SlideDownVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+		.SlideDownPanel {
+		
+			/* Layout */
+			width: 100%;
+			overflow: hidden;
+			
+			/* Style */
+			background-color: #aaa;
+			color: #fff;
+			
+			transition__: max-height 3.0s ease;
+		}
+
+		.PanelClose {
+			/* Layout */
+			max-height: 0px;
+			
+			/* Style */
+			border: solid 0px green;
+			
+			transition: max-height 1.0s ease-in-out, border 0.9s step-end;
+		}
+
+		.PanelOpen {
+			/* Layout */
+			max-height: 500px;
+			
+			/* Style */
+			border: solid 1px green;
+			
+			transition: max-height 1.0s ease-in-out, border 0.1s step-start;
+		}

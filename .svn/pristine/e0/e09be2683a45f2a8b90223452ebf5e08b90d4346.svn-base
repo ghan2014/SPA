@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="AppVcc" data-ng-app="AppVcc" data-ng-controller="AppVccVwCtrl" ng-strict-di>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+	
+	<!-- So Bot can call with escape frag at end of url -->
+	<!-- SEE: http://stackoverflow.com/questions/24446065/google-bot-crawling-on-angularjs-site-with-html5-mode-routes -->
+	<meta name="fragment" content="!">
+	
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<title>LiuMei TALK!</title>
+
+	<script>
+		//{ GLOBAL SETS (1) 
+			aaGlobalee = (typeof aaGlobalee === 'object')  ? aaGlobalee : {}
+		//}
+	</script>
+
+	<!---{ D-CFG ---
+		<base href="/webjerryLive05/">
+		<script>
+			//{ CONSOLE-DOG
+				console.dog = console.log	
+				///console.dog = function() {};
+			//}
+			
+			//{ GLOBAL SETS (2).  Put into aaGlobalee namespace
+				aaGlobalee.baseHref = "/webjerryLive05/"
+				aaGlobalee.ourServicesProtocalHost = "https://pi-api.nanocosm.com"
+				aaGlobalee.fbAppId = "1056625957688762"
+				aaGlobalee.fbAppVer = 'v2.4'
+			//}
+		</script>
+	!--- END D-CFG }--->
+	
+	<!---{ S-CFG ---
+		<base href="/">
+		<script>
+			//{ CONSOLE-DOG
+				console.dog = console.log	
+				///console.dog = function() {};
+			//}
+			
+			//{ GLOBAL SETS (2).  Put into aaGlobalee namespace
+				aaGlobalee.baseHref = "/"
+				aaGlobalee.ourServicesProtocalHost = "https://pi-api.nanocosm.com"
+				aaGlobalee.fbAppId = "1056625957688762"
+				aaGlobalee.fbAppVer = 'v2.4'
+			//}
+		</script>
+	!--- S-CFG }--->
+
+
+	<!---{ P-CFG --->
+		<base href="/">
+		<script>
+			//{ CONSOLE-DOG
+				///console.dog = console.log	
+				console.dog = function() {};
+			//}
+			
+			//{ GLOBAL SETS (2).  Put into aaGlobalee namespace
+				aaGlobalee.baseHref = "/"
+				aaGlobalee.ourServicesProtocalHost = "https://tau-api.nanocosm.com"
+				aaGlobalee.fbAppId = "868343843255407"
+				aaGlobalee.fbAppVer = 'v2.3'
+				//aaGlobalee.fbAppId = "137052293321576"
+				//aaGlobalee.fbAppVer = 'v2.5'
+				//aaGlobalee.fbAppId = "941348745902217"
+				//aaGlobalee.fbAppVer = 'v2.5'
+			//}
+		</script>
+	<!--- P-CFG }--->
+	
+	<script>
+		//{ GLOBAL SETS (3).  Put into aaGlobalee namespace
+			aaGlobalee.playerPageUrl = aaGlobalee.baseHref+"Assets/Player"
+		//}
+	</script>
+	
+	
+	<!-- VENDOR CSS -->	
+	<link rel="stylesheet" href="Assets/Bundles/bundle_vendorCss.css">
+	
+</head>
+<body>
+	<!-- ALL NG APP CONTENT IS BUILT WITHIN THIS TAG -->
+	<drct-state-container-vcc></drct-state-container-vcc>
+
+	<!-- MESSAGE UNTIL ANGULAR RUNS -->
+	<div class="PleaseWaitMssg" ng-style="{'display':loc.pleaseWaitDisplayStyle}">
+		Just a moment please, the page will load soon.
+	</div>
+
+	<!-- VENDOR JAVASCRIPT -->	
+	<script type="text/javascript" src="Assets/Bundles/bundle_vendorJs.js" charset="utf-8"></script>
+	
+	<!-- WEBPACK BUNDLED APP JAVASCRIPT/CSS/HTML -->	
+	<script type="text/javascript" src="Assets/Bundles/bundle_app.js" charset="utf-8"></script>
+	
+
+	<script>
+		//{ INSTANCIATE PAGE'S MEDIATOR
+			aaGlobalee.pgMediator = new aaGlobalee.PgMediatorClass();
+			console.dog(">>> aaGlobalee (after end of script loads): ", aaGlobalee);
+		//}
+	</script>
+
+</body>
+</html>

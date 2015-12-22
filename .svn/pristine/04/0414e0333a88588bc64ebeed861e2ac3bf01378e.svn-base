@@ -1,0 +1,10 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: LastPlayedPanelVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+This is the {{datas.view.info.myname}} Tmplt.
+<div  class="LastPlayedPanelVcc">
+	This is the inside of {{datas.view.info.myname}}.
+</div>
+

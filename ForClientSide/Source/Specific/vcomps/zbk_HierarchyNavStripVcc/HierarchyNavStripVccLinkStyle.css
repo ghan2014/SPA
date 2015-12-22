@@ -1,0 +1,40 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: HierarchyNavStripVccLinkStyle.css
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-hierarchy-nav-strip-vcc {
+	display: block;
+}
+
+.HierarchyNavStripVcc {
+	/** Layout **/
+	/** Style **/
+	text-transform: uppercase;
+}
+
+.HierarchyNavStripVcc .navLink {
+	/** Layout **/
+	/** Style **/
+    text-decoration: none;
+    color: #33e;
+}
+
+
+.HierarchyNavStripVcc .navLink:after {
+	/** Layout **/
+	/** Style **/
+    content: " | ";
+}
+
+
+/*
+<div  class="HierarchyNavStripVcc">
+	<div class="whoAmI">This is the inside of {{datas.view.info.myname}}.</div>
+	<a class="navLink" href="#!/home" title"HOME">HOME</a><span class=navSeperator"> | </span><span class=navThisPage">STATION INFO</span>
+</div>
+*/

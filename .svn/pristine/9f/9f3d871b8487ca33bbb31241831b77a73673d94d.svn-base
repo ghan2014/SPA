@@ -1,0 +1,34 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: Button4rFacebookShareVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+	<!---
+	<button
+		ng-click = "thisc.shareIt()"
+	>
+		[-FB-It-]
+	</button>
+	---->
+	
+
+	<button
+		class = "shareTrigger"
+		data-drct_click_to_mediator_adc = '{ 
+			"notice": {
+				"noticeName": "FacebookShareButton_clicked",
+				"purposing": "",
+				"triggerTagToUse": ""
+			}
+		}'
+
+	>
+	</button>
+	
+</div>

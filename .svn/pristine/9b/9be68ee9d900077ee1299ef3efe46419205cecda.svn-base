@@ -1,0 +1,16 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: PlayerPanelVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+<div class="PlayerPanelVcc vcBox">
+	
+	<div class="displaySwitch"
+		ng-if="datas.view.mech.isOkayToShow"
+	>
+		<div class="whoAmI">This is the inside of {{datas.view.info.myname}}.</div>
+		<drct-floating-options-menu-vcc  data-go_dude="truee"></drct-floating-options-menu-vcc>
+	</div>
+</div>
+
+

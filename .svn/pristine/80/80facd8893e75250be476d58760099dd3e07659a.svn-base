@@ -1,0 +1,47 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: BodyContentHolderVccLinkStyle.css
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+ .whoAmI {
+	display: none;
+ }
+ 
+ .vcBox {
+	/** border: dotted 1px #b77; **/
+ }
+ 
+* {
+	/** Layout **/
+	margin: 0;
+	padding: 0;
+ }
+ 
+  h1, h2, h3, h4, h5 {
+	/** Layout **/
+	/** Style **/
+	font-weight: normal;
+ }
+ 
+ body {
+	/** Layout **/
+	min-height:100%;
+	
+	/** Style **/
+}
+ 
+drct-body-content-holder-vcc {
+	/** Layout **/
+	display: block;
+
+
+	
+	/** Style **/
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+

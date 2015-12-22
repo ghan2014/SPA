@@ -1,0 +1,40 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: Button4rEmailShareVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-button-4r-email-report-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.Button4rEmailReportVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+		.reportTrigger
+			/* Style */
+			{$AppVcc_sprite-report}
+			border: none;
+			background-color: transparent;
+			border-radius: 50px /* Insure max curvature */
+
+		.reportTrigger:hover
+			{$AppVcc_triggerHoverEffect4rDarkishTrigger}
+		
+		.reportTrigger:active
+			{$AppVcc_triggerActiveEffect}
+			
+		
+		.reportTrigger:focus
+			outline: none;
+	
+

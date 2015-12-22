@@ -1,0 +1,22 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: Page4rEmailValidationVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<div class="contentInPage">
+		<p class="articleParag_in_page">{{loc.paragraph01Copy}}</p>
+		<p class="articleParag_in_page">{{loc.paragraph02Copy}}</p>
+		<p class="articleParag_in_page">{{loc.paragraph03Copy}}</p>
+		<p class="articleParag_in_page">{{loc.paragraph04Copy}}</p>
+	</div>
+	
+</div>
+

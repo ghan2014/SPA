@@ -1,0 +1,79 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: StationsPanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<nav class="listingsNav">
+		<ul class="listingsBox"	
+			data-drct_click_to_mediator_adc = '{
+				"pkgTags": [".PlayButtonVccTrigger"],
+				"doBubble": "true"
+			}'
+		>
+			
+			<li class="listingItem" 
+				ng-repeat="Listing_ in loc.listings"   
+				ng-class="{ 'focsed' : Listing_.id == vv.FocsedItem.id}"
+				id="listing_{{Listing_.id}}"
+			>
+
+				<a class="link_on_listingContent" 
+					href="{{loc.stationSyn}}/{{Listing_.title | spacesToDashes }}/{{Listing_.id}}"
+					title="{{Listing_.title}}" 
+				>
+
+					<header class="header_in_listing">
+
+						<div class="imageAndButtonHolder_in_listing">
+							<img class="image_in_listing" 
+								src="{{Listing_.stationLogoUrl}}"
+								alt="Listing image for {loc.stationSyn}} named {{Listing_.title}}"
+							>
+							<aside class="playbuttonBox_in_listing transcludeSlot"
+								role="complementary"
+							>
+								<drct-play-button-vcc
+									data-aria_labeling = 'Button to play tracks for primary {{loc.playlistSyn}} for this {{loc.stationSyn}}'
+									data-instance_idfier = '{{loc.myVcName}}_{{$index}}'
+									data-playlist_id = ''
+									data-station_id = '{{Listing_.id}}'
+									data-track_id = ''
+									data-go_dude = 'truee'
+								>
+								</drct-play-button-vcc>
+							</aside>
+						</div>
+						
+						<div class="primaryZone_in_listing"> 
+							<h1 class="heading_in_listing">
+									{{Listing_.title }} 
+							</h1>
+
+							<div class="dashboard_in_listing">
+							</div>
+						</div>
+						
+						<div class="verticalDashboardRight_in_listing">
+							<div class="ontoPageArrowHolder_in_listing"></div>
+						</div>
+					</header>
+
+					<div class="descriptionZone_in_listing">
+						<p class="descriptionCopy_in_listing">
+							{{Listing_.description}}
+						<p>
+					</div>
+				</a>
+				
+			</li>
+		</ul>
+	</nav>
+</div>

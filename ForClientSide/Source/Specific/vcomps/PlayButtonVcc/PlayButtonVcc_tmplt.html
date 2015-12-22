@@ -1,0 +1,43 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: PlayButtonVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<button class="{{loc.myVcName}}Trigger  {{loc.myVcName}}Trigger_{{loc.instanceIdfier}}"
+		aria-label="{{ariaLabeling}}"
+		onclick="return false;"
+		data-pkg = '{
+			"notice": {
+				"noticeName": "{{loc.myVcName}}_clicked",
+				"vc": "{{loc.myVcName}}",
+				"context": "",
+				"playlistId": "{{loc.playlistId}}",
+				"stationId": "{{loc.stationId}}",
+				"trackId": "{{loc.trackId}}",
+				"trackUid": "{{loc.trackUid}}",
+				"triggerTagToUse": "{{loc.myVcName}}_{{loc.instanceIdfier}}"
+			}
+		}'
+	>
+	</button>
+	
+</div>
+
+<!--- EXAMPLE ---
+	<drct-play-button-vcc
+		data-aria_labeling = 'a'
+		data-instance_idfier = 'a'
+		data-playlist_id = 'a'
+		data-station_id = 'a'
+		data-track_id = 'a'
+	>
+	</drct-play-button-vcc>
+-->

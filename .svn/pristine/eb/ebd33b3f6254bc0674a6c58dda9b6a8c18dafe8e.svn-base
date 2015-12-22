@@ -1,0 +1,708 @@
+
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: AppVcc_styleLib.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * AppVcc VARIABLES
+ * *********************************************************************
+ */
+
+
+$AppVcc_stnd16x9CalcHeight = calc(100% * 9/16);
+
+$AppVcc_stndBaseMinBreakpoint = 'only screen and (min-width : 320px)'; 
+$AppVcc_stndXSmMinBreakpoint = 'only screen and (min-width : 480px)';
+$AppVcc_stndSmMinBreakpoint = 'only screen and (min-width : 768px)';
+$AppVcc_stndMdMinBreakpoint = 'only screen and (min-width : 992px)';
+$AppVcc_stndLgMinBreakpoint = 'only screen and (min-width : 1200px)';
+
+
+
+$AppVcc_Header4StndUseVcc_Height = calc(64px - 4px);
+$AppVcc_stndMajorHorizGutterHeight = 20px;
+
+$AppVcc_imgGraphicsPathSlashAZ = '%2FAssets%2FMedia%2FImgGraphics%2F'
+$AppVcc_imgPicturesPathSlashAZ = '%2FAssets%2FMedia%2FImgPictures%2F'
+$AppVcc_imgSpritesPathSlashAZ = '%2FAssets%2FMedia%2FImgSprites%2F'
+
+$AppVcc_bizCoverImg = $AppVcc_imgPicturesPathSlashAZ'schoolcover_website_default_lowres.jpg'
+$AppVcc_stationDtlCoverImg = $AppVcc_imgPicturesPathSlashAZ'schoolcover_mobile_default.png'
+$AppVcc_spriteWithBG = AppVcc_imgSpritesPathSlashAZ'spriteWithBG.png'
+$AppVcc_spriteWithoutBG = AppVcc_imgSpritesPathSlashAZ'spriteWithoutBG.png'
+
+$AppVcc_stndFontFamily = Verdana, Geneva, sans-serif;
+
+$AppVcc_stndGrandeFontSize = 23px;
+$AppVcc_stndXLargeFontSize = 19px;
+$AppVcc_stndLargeFontSize = 17px;
+$AppVcc_stndLargeishFontSize = 15px;
+$AppVcc_stndMediumFontSize = 13px;
+$AppVcc_stndSmallishFontSize = 11px;
+$AppVcc_stndSmallFontSize = 9px;
+
+$AppVcc_stndOrange = #f5841f;
+$AppVcc_fbBlue = #00a;
+
+$AppVcc_stndWhite = #fff;
+$AppVcc_fadedGlyphishWhite = solid 1px rgba(255, 255, 255, .3);
+
+
+
+$AppVcc_stndLtBlackish = #444;
+$AppVcc_stndMdBlackish = #282828;
+$AppVcc_stndDkBlackish = #000;
+
+$AppVcc_stndLtBlue = #CEF1FF;
+$AppVcc_stndMdBlue = #2B91D6;
+$AppVcc_stndDkBlue = #1C75BC;
+
+$AppVcc_stndRed = #c00;
+$AppVCC_stndGreen = #6C3;
+
+$AppVcc_stndXLtGrey = #eee;
+$AppVcc_stndLtGrey = #ddd;
+$AppVcc_stndMdGrey = #bbb;
+$AppVcc_stndDkGrey = #999;
+$AppVcc_stndDkerGrey = #555;
+
+$AppVcc_stndOrangeLtGrey = #db9;
+$AppVcc_stndOrangeMdGrey = #b97;
+
+$AppVcc_stndLinkColor = #00d;
+$AppVcc_stndLinkHoverColor = #00f;
+$AppVcc_stndLinkActiveColor = #08f;
+
+$AppVcc_stndErrorColor = #c00;
+$AppVcc_stndEnabledBlueGrey = #abc;
+
+$AppVcc_stndDkerGreyBorder = solid 1px $AppVcc_stndDkerGrey
+$AppVcc_stndDkGreyBorder = solid 1px $AppVcc_stndDkGrey
+$AppVcc_stndMdGreyBorder = solid 1px $AppVcc_stndMdGrey
+$AppVcc_stndLtGreyBorder = solid 1px $AppVcc_stndLtGrey
+$AppVcc_stndFocusedBorder = solid 1px $AppVcc_stndFocusedBorderColor
+
+$AppVcc_stndOneUpTextBigShadow = 2px 2px 5px $AppVcc_stndDkBlackish
+$AppVcc_stndOneUpBoxShadow_TBD = 2px 2px 8px $AppVcc_stndDkBlackish
+$AppVcc_stndOneUpBottomBorderShadow = 0 3px 6px $AppVcc_stndLtBlackish
+$AppVcc_stndOneUpTopBorderBlur = 0 -3px 6px $AppVcc_stndWhite
+
+
+$AppVcc_bigPanelBgColor = $AppVcc_stndXLtGrey
+
+
+
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * AppVcc SELF DESCRIBING BLOCKS
+ * *********************************************************************
+ */
+ 
+$AppVcc_stndGrandeText = @block {
+		font-family: $AppVcc_stndFontFamily
+		font-size: $AppVcc_stndGrandeFontSize
+		color__: $AppVcc_stndLtBlackish 
+}
+
+$AppVcc_stndXLargeText = @block {
+	font-family: $AppVcc_stndFontFamily
+	font-size: $AppVcc_stndXLargeFontSize
+	color: $AppVcc_stndLtBlackish 
+}
+
+$AppVcc_stndLargeText = @block {
+	font-family: $AppVcc_stndFontFamily
+	font-size: $AppVcc_stndLargeFontSize
+	color: $AppVcc_stndLtBlackish 
+}
+
+$AppVcc_stndLargeishText = @block {
+	font-family: $AppVcc_stndFontFamily
+	font-size: $AppVcc_stndLargeishFontSize
+	color: $AppVcc_stndMdBlackish 
+}
+
+$AppVcc_stndMediumText = @block {
+	font-family: $AppVcc_stndFontFamily
+	font-size: $AppVcc_stndMediumFontSize
+	color: $AppVcc_stndMdBlackish 
+}
+
+$AppVcc_stndSmallishText = @block {
+	font-family: $AppVcc_stndFontFamily
+	font-size: $AppVcc_stndSmallishFontSize
+	color: $AppVcc_stndMdBlackish 
+}
+
+$AppVcc_stndSmallText = @block {
+	font-family: $AppVcc_stndFontFamily
+	font-size: $AppVcc_stndSmallishFontSize
+	color: $AppVcc_stndDkBlackish 
+}
+
+$AppVcc_stndText = @block {
+	{$AppVcc_stndMediumText}
+}
+
+$AppVcc_stndBigLightTextEffectWithShadow = {
+	color: $AppVcc_stndWhite
+	text-shadow: $AppVcc_stndOneUpTextBigShadow	
+}
+
+$AppVcc_stndLinkEffect = @block {
+	color: $AppVcc_stndLinkColor
+	text-decoration: none
+}
+$AppVcc_stndSmallishLink = @block {
+	color: $AppVcc_stndLinkColor
+	text-decoration: none
+	font-family: $AppVcc_stndFontFamily
+	font-size: $AppVcc_stndSmallishFontSize
+	&:hover {
+		color: $AppVcc_stndLinkHoverColor
+	}
+	&:active {
+		color: $AppVcc_stndLinkActiveColor	
+	}
+}
+
+
+$AppVcc_ScreenReaderOnly = @block {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+}
+
+
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * AppVcc GENERAL USAGE VARIABLES
+ * *********************************************************************
+ */ 
+ 
+ $AppVcc_detailHeadingTextShadow = $AppVcc_stndOneUpTextBigShadow
+ $AppVcc_detailLogoBorder = $AppVcc_stndMdGreyBorder
+ $AppVcc_detailLogoBoxShadow = $AppVcc_stndOneUpBoxShadow
+
+
+
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * AppVcc USAGE NAMED OBJECTS
+ * *********************************************************************
+ */
+ 
+ $AppVcc_triggerHoverEffect4rLightishTrigger =  { 
+	background-color: $AppVcc_stndOrangeMdGrey
+	box-shadow: 0 0 10px $AppVcc_stndOrangeMdGrey 
+}
+
+$AppVcc_triggerHoverEffect4rDarkishTrigger =  { 
+	background-color: $AppVcc_stndOrangeLtGrey
+	box-shadow: 0 0 10px $AppVcc_stndOrangeLtGrey 
+}
+	
+$AppVcc_triggerActiveEffect = {
+	background-color: $AppVcc_stndOrange  
+	box-shadow: 0 0 10px $AppVcc_stndOrange 
+}
+
+ $AppVcc_ontoHoverEffect4rTrigger =  { 
+	background-color: #ddf
+	box-shadow: 0 0 10px #aaf
+}
+
+$AppVcc_ontoActiveEffect4rTrigger = {
+	background-color: #aaf
+	box-shadow: 0 0 10px #aaf
+}
+
+$AppVcc_detailLogoBorder = {
+	border: $AppVcc_stndMdGreyBorder
+	box-shadow: $AppVcc_stndOneUpBoxShadow
+}
+
+$AppVcc_listingBorder = {
+	border: $AppVcc_stndDkGreyBorder
+	border-radius: 10px
+}
+
+$AppVcc_floatingBox = {
+	border: $AppVcc_stndMdGreyBorder
+	box-shadow: $AppVcc_stndOneUpBoxShadow
+	border-radius: 10px
+}
+
+
+$AppVcc_borderOnThumbImage = {
+	border: $AppVcc_stndLtGreyBorder
+}
+
+$AppVcc_bottomBorderOnCoverImage = {
+	border-bottom: solid 5px $AppVcc_stndXLtGrey
+}
+
+
+
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * AppVcc USAGE NAMED BLOCKS
+ * *********************************************************************
+ */ 
+
+$AppVcc_detailTitle = @block {
+	{$AppVcc_stndLargeText}
+	text-transform__: capitalize
+	
+	@media $AppVcc_stndXSmMinBreakpoint  {
+		{$AppVcc_stndGrandeText}
+	}
+}
+
+$AppVcc_detailDescText = @block {
+	{$AppVcc_stndMediumText}
+}
+
+$AppVcc_detailStatNvpLabel = @block {
+	{$AppVcc_stndLargeishText}
+	color: $AppVcc_stndOrange
+	text-transform: capitalize
+}
+
+$AppVcc_detailStatNvpValue = @block {
+	{$AppVcc_stndMediumText}
+}
+
+$AppVcc_detailStatNvpFlipLabel = @block {
+	{ $AppVcc_stndSmallishText }
+	color: $AppVcc_stndOrange
+	text-transform: capitalize
+}
+
+$AppVcc_detailStatNvpFlipValue = @block {
+	{$AppVcc_stndText}
+}
+
+
+$AppVcc_detailStatAloneValue = @block {
+	{$AppVcc_stndText}
+}
+
+$AppVcc_detailStatAloneValue = @block {
+	{$AppVcc_stndText}
+}
+
+
+$AppVcc_detailParentLink = @block {
+	{$AppVcc_stndSmallishLink}
+}
+
+
+
+
+
+
+$AppVcc_listingTitle = @block {
+	{$AppVcc_stndLargeText}
+	text-transform__: capitalize  
+}
+
+$AppVcc_listingDescText = @block {
+	{$AppVcc_stndText}
+}
+
+$AppVcc_listingStatNvpLabel = @block {
+	{$AppVcc_stndLargeishText}
+	color: AppVcc_stndOrange
+	text-transform: capitalize
+}
+
+$AppVcc_listingStatNvpVal = @block {
+	{$AppVcc_stndSmallishText}
+}
+
+$AppVcc_listingStatNvpFlipLabel = @block {
+	color: AppVcc_stndOrange
+	text-transform: capitalize
+}
+
+$AppVcc_listingStatNvpFlipValue = @block {
+	{$AppVcc_stndLargeishText}
+}
+
+$AppVcc_listingStatAloneValue = @block {
+	{$AppVcc_stndSmallishText}
+}
+
+
+$AppVcc_proseishPageTitle = $AppVcc_listingTitle
+
+$AppVcc_proseishPageSectionTitle = $AppVcc_detailStatNvpLabel
+
+$AppVcc_proseishPageProse = $AppVcc_stndMediumText
+
+
+
+
+
+
+
+
+$AppVcc_formishTitle = @block {
+	{$AppVcc_stndXLargeText}
+	text-transform: uppercase
+}
+
+$AppVcc_formishInfoText = @block {
+	{$AppVcc_stndText}
+}
+
+$AppVcc_formishFieldNote = @block {
+	/* Layout */
+	margin-top: 3px;
+	
+	/* Style */
+	{$AppVcc_stndSmallishText}
+}
+
+$AppVcc_formishFieldErrorNote = @block {
+	/* Layout */
+	margin-top: 3px;
+	
+	/* Style */
+	{$AppVcc_stndSmallishText}
+	color: $AppVcc_stndRed 
+}
+
+$AppVcc_formishFieldNoteAndLink = @block {
+	{$AppVcc_stndSmallishText}
+	color: $AppVcc_stndLinkColor
+}
+
+$AppVcc_formishFieldValuePlaceHolder = @block {
+	{$AppVcc_stndLargeishText}
+	color: $AppVcc_stndDkGrey
+}
+
+$AppVcc_formInput = @block {
+	/* Layout */
+	width: 100%
+	height: 34px
+	padding: 6px 12px
+
+	/* Style */
+	{$AppVcc_stndLargeishText}
+	line-height: 1.2
+	background-color: $AppVcc_stndWhite
+	border: $AppVcc_stndLtGreyBorder 
+}
+
+$AppVcc_formCheckBox = @block {
+	 
+}
+
+$AppVcc_formSelectOption = @block {
+	/* Style */
+	 {$AppVcc_stndLargeishText}
+	 color: $AppVcc_stndLtBlackish 
+}
+
+$AppVcc_proceedButton = @block {
+    /* Layout */
+    /* Style */
+    {$AppVcc_stndLargeishText}
+	text-transform: uppercase
+	color: $AppVcc_stndWhite;
+	background-color: $AppVcc_stndOrange
+    border: $AppVcc_stndDkerGreyBorder
+    border-radius: 4px
+}
+
+$AppVcc_proceedButtonDisabled = @block {
+    /* Layout */
+    /* Style */
+	{$AppVcc_stndLargeishText}
+	text-transform: uppercase
+	color: $AppVcc_stndDkGrey;
+	background-color: $AppVcc_stndOrangeLtGrey
+    border: $AppVcc_stndDkerGreyBorder
+    border-radius: 8px
+}
+
+$AppVcc_cancelButton = @block {
+    /* Layout */    
+    /* Style */
+	{$AppVcc_stndLargeishText}
+	text-transform: uppercase
+	color: $AppVcc_stndDkGrey;
+	background-color: $AppVcc_stndOrangeLtGrey
+    border: $AppVcc_stndDkerGreyBorder
+    border-radius: 8px
+}
+
+
+
+
+
+			
+
+
+
+
+
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * AppVcc SPRITE BLOCKS
+ * *********************************************************************
+ */
+ 
+$AppVcc_sprite = @block { 
+    background-image: url($AppVcc_imgSpritesPathSlashAZ'spritesheet.png');
+    background-repeat: no-repeat;
+    display: block;
+}
+
+$AppVcc_sprite-15sfwd = @block { {$AppVcc_sprite}
+    width: 30px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+$AppVcc_sprite-15srewind = @block { {$AppVcc_sprite}
+    width: 30px;
+    height: 30px;
+    background-position: -45px -5px;
+}
+
+$AppVcc_sprite-LiumeiTalk-Logo = @block { {$AppVcc_sprite}
+    width: 165px;
+    height: 50px;
+    background-position: -85px -5px;
+}
+
+$AppVcc_sprite-arrow_right = @block { {$AppVcc_sprite}
+    width: 14px;
+    height: 22px;
+    background-position: -260px -5px;
+}
+
+$AppVcc_sprite-browse = @block { {$AppVcc_sprite}
+    width: 35px;
+    height: 35px;
+    background-position: -284px -5px;
+}
+
+$AppVcc_sprite-btn_loginFB_nobg = @block { {$AppVcc_sprite}
+    width: 151px;
+    height: 17px;
+    background-position: -5px -65px;
+}
+
+$AppVcc_sprite-btn_signupFB = @block { {$AppVcc_sprite}
+    width: 337px;
+    height: 42px;
+    background-position: -5px -92px;
+}
+
+$AppVcc_sprite-btn_signupFB_hover = @block { {$AppVcc_sprite}
+    width: 337px;
+    height: 42px;
+    background-position: -5px -144px;
+}
+
+$AppVcc_sprite-btn_signupFB_nobg = @block { {$AppVcc_sprite}
+    width: 167px;
+    height: 17px;
+    background-position: -166px -65px;
+}
+
+$AppVcc_sprite-close = @block { {$AppVcc_sprite}
+    width: 21px;
+    height: 21px;
+    background-position: -5px -196px;
+}
+
+$AppVcc_sprite-feedback = @block { {$AppVcc_sprite}
+    width: 35px;
+    height: 35px;
+    background-position: -36px -196px;
+}
+
+$AppVcc_sprite-icon_default = @block { {$AppVcc_sprite}
+    width: 49px;
+    height: 18px;
+    background-position: -81px -196px;
+}
+
+$AppVcc_sprite-icon_facebook_white = @block { {$AppVcc_sprite}
+    width: 9px;
+    height: 15px;
+    background-position: -329px -5px;
+}
+
+$AppVcc_sprite-more_dots = @block { {$AppVcc_sprite}
+    width: 9px;
+    height: 30px;
+    background-position: -140px -196px;
+}
+
+$AppVcc_sprite-more_dots_white = @block { {$AppVcc_sprite}
+    width: 9px;
+    height: 30px;
+    background-position: -159px -196px;
+}
+
+$AppVcc_sprite-more_dots_white_cover = @block { {$AppVcc_sprite}
+    width: 30px;
+    height: 50px;
+    background-position: -178px -196px;
+}
+
+$AppVcc_sprite-more_info = @block { {$AppVcc_sprite}
+    width: 26px;
+    height: 26px;
+    background-position: -218px -196px;
+}
+
+$AppVcc_sprite-more_player = @block { {$AppVcc_sprite}
+    width: 7px;
+    height: 22px;
+    background-position: -329px -30px;
+}
+
+$AppVcc_sprite-myaccount = @block { {$AppVcc_sprite}
+    width: 35px;
+    height: 35px;
+    background-position: -254px -196px;
+}
+
+$AppVcc_sprite-myschools = @block { {$AppVcc_sprite}
+    width: 35px;
+    height: 35px;
+    background-position: -299px -196px;
+}
+
+$AppVcc_sprite-pause_large = @block { {$AppVcc_sprite}
+    width: 68px;
+    height: 68px;
+    background-position: -5px -241px;
+}
+
+$AppVcc_sprite-pause_small = @block { {$AppVcc_sprite}
+    width: 38px;
+    height: 38px;
+    background-position: -83px -241px;
+}
+
+$AppVcc_sprite-play_gry = @block { {$AppVcc_sprite}
+    width: 40px;
+    height: 40px;
+    background-position: -218px -241px;
+}
+
+$AppVcc_sprite-play_large = @block { {$AppVcc_sprite}
+    width: 68px;
+    height: 68px;
+    background-position: -268px -241px;
+}
+
+$AppVcc_sprite-rateapp = @block { {$AppVcc_sprite}
+    width: 35px;
+    height: 35px;
+    background-position: -131px -241px;
+}
+
+$AppVcc_sprite-report = @block { {$AppVcc_sprite}
+    width: 36px;
+    height: 36px;
+    background-position: -348px -5px;
+}
+
+$AppVcc_sprite-search = @block { {$AppVcc_sprite}
+    width: 35px;
+    height: 35px;
+    background-position: -352px -51px;
+}
+
+$AppVcc_sprite-settings = @block { {$AppVcc_sprite}
+    width: 35px;
+    height: 35px;
+    background-position: -352px -96px;
+}
+
+$AppVcc_sprite-share_email = @block { {$AppVcc_sprite}
+    width: 36px;
+    height: 36px;
+    background-position: -352px -141px;
+}
+
+$AppVcc_sprite-share_facebook = @block { {$AppVcc_sprite}
+    width: 36px;
+    height: 36px;
+    background-position: -352px -187px;
+}
+
+$AppVcc_sprite-share_googleplus = @block { {$AppVcc_sprite}
+    width: 36px;
+    height: 36px;
+    background-position: -346px -233px;
+}
+
+$AppVcc_sprite-share_twitter = @block { {$AppVcc_sprite}
+    width: 36px;
+    height: 36px;
+    background-position: -346px -279px;
+}
+
+$AppVcc_sprite-share_wechat = @block { {$AppVcc_sprite}
+    width: 36px;
+    height: 36px;
+    background-position: -5px -325px;
+}
+
+$AppVcc_sprite-skip = @block { {$AppVcc_sprite}
+    width: 18px;
+    height: 23px;
+    background-position: -176px -279px;
+}
+
+$AppVcc_sprite-skip-back = @block { {$AppVcc_sprite}
+    width: 18px;
+    height: 23px;
+    background-position: -51px -325px;
+}
+
+$AppVcc_sprite-view_project = @block { {$AppVcc_sprite}
+    width: 30px;
+    height: 30px;
+    background-position: -79px -325px;
+}
+
+$AppVcc_sprite-volume = @block { {$AppVcc_sprite}
+    width: 24px;
+    height: 24px;
+    background-position: -119px -325px;
+}
+
+
+
+
+$AppVcc_sprite-app-logo = $AppVcc_sprite-LiumeiTalk-Logo
+$AppVcc_sprite-onto-page-arrow = $AppVcc_sprite-arrow_right

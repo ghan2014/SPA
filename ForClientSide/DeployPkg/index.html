@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="AppVcc" data-ng-app="AppVcc" data-ng-controller="AppVccVwCtrl" ng-strict-di>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+	
+	<!-- So Bot can call with escape frag at end of url -->
+	<!-- SEE: http://stackoverflow.com/questions/24446065/google-bot-crawling-on-angularjs-site-with-html5-mode-routes -->
+	<meta name="fragment" content="!">
+	
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<title>LiuMei TALK!</title>
+
+	<script>
+		//{ GLOBAL SETS (1) 
+			aaGlobalee = (typeof aaGlobalee === 'object')  ? aaGlobalee : {}
+		//}
+	</script>
+
+	<!--{ D-CFG -->
+		<base href="/webjerryLive05/">
+		<script>
+			//{ CONSOLE-DOG
+				console.dog = console.log	
+				///console.dog = function() {};
+			//}
+			
+			//{ GLOBAL SETS (2).  Put into aaGlobalee namespace
+				aaGlobalee.baseHref = "/webjerryLive05/"
+				aaGlobalee.ourServicesProtocalHost = "https://pi-api.nanocosm.com"
+				aaGlobalee.fbAppId = "1056625957688762"
+				aaGlobalee.fbAppVer = 'v2.4'
+			//}
+		</script>
+	<!-- END D-CFG }-->
+	
+	<!--{ S-CFG --
+		<base href="/">
+		<script>
+			//{ CONSOLE-DOG
+				console.dog = console.log	
+				///console.dog = function() {};
+			//}
+			
+			//{ GLOBAL SETS (2).  Put into aaGlobalee namespace
+				aaGlobalee.baseHref = "/"
+				aaGlobalee.ourServicesProtocalHost = "https://pi-api.nanocosm.com"
+				aaGlobalee.fbAppId = "1056625957688762"
+				aaGlobalee.fbAppVer = 'v2.4'
+			//}
+		</script>
+	!-- S-CFG }-->
+
+
+	<!--{ P-CFG --
+		<base href="/">
+		<script>
+			//{ CONSOLE-DOG
+				///console.dog = console.log	
+				console.dog = function() {};
+			//}
+			
+			//{ GLOBAL SETS (2).  Put into aaGlobalee namespace
+				aaGlobalee.baseHref = "/"
+				aaGlobalee.ourServicesProtocalHost = "https://tau-api.nanocosm.com"
+				aaGlobalee.fbAppId = "868343843255407"
+				aaGlobalee.fbAppVer = 'v2.3'
+			//}
+		</script>
+	!-- P-CFG }-->
+	
+
+	<script>
+		//{ GLOBAL SETS (3).  Put into aaGlobalee namespace.
+			aaGlobalee.playerPageUrl = aaGlobalee.baseHref+"Assets/Player"
+		//}
+		
+		//{ "BIND" POLYFILL (for phantomjs).
+			// Obtained from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind .
+			if (!Function.prototype.bind) {
+				Function.prototype.bind = function(oThis) {
+					if (typeof this !== 'function') {
+						// closest thing possible to the ECMAScript 5
+						// internal IsCallable function
+						throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+					}
+
+					var aArgs   = Array.prototype.slice.call(arguments, 1),
+					fToBind = this,
+					fNOP    = function() {},
+					fBound  = function() {
+						return fToBind.apply(this instanceof fNOP
+						? this
+						: oThis,
+						aArgs.concat(Array.prototype.slice.call(arguments)));
+					};
+
+					if (this.prototype) {
+						// native functions don't have a prototype
+						fNOP.prototype = this.prototype; 
+					}
+					fBound.prototype = new fNOP();
+
+					return fBound;
+				};
+			}
+		//}
+	</script>
+	
+	<!-- VENDOR CSS -->	
+	<link rel="stylesheet" href="Assets/Bundles/bundle_vendorCss.css">
+	
+	
+	<!-- BASIC STYLING FOR PRIOR TO APP LOADED STATE. -->
+	<style>
+		body {
+			/* Style */
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 13px;
+			background-color: #fff;
+		}
+		.PleaseWaitMssg {
+			/* Layout */
+			text-align: center;
+			margin-top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<!-- ALL NG APP CONTENT IS BUILT WITHIN THIS TAG -->
+	<drct-state-container-vcc></drct-state-container-vcc>
+
+	<!-- MESSAGE UNTIL ANGULAR RUNS -->
+	<div class="PleaseWaitMssg" ng-style="{'display':loc.pleaseWaitDisplayStyle}">
+		Just a moment please, the page will load soon.
+	</div>
+
+	<!-- VENDOR JAVASCRIPT -->	
+	<script type="text/javascript" src="Assets/Bundles/bundle_vendorJs.js" charset="utf-8"></script>
+	
+	<!-- WEBPACK BUNDLED APP JAVASCRIPT/CSS/HTML -->	
+	<script type="text/javascript" src="Assets/Bundles/bundle_app.js" charset="utf-8"></script>
+	
+
+	<script>
+		//{ INSTANCIATE PAGE'S MEDIATOR
+			aaGlobalee.pgMediator = new aaGlobalee.PgMediatorClass();
+			console.dog(">>> aaGlobalee (after end of script loads): ", aaGlobalee);
+		//}
+	</script>
+
+</body>
+</html>

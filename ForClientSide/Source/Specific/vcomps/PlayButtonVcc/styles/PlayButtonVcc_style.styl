@@ -1,0 +1,52 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: PlayButtonVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-play-button-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.PlayButtonVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+		.PlayButtonVccTrigger
+			/* Style */
+			{$AppVcc_sprite-play_gry}
+			border: none;
+			background-color: transparent;
+			border-radius: 50px /* Insure max curvature */
+
+		.PlayButtonVccTrigger:hover
+			{$AppVcc_triggerHoverEffect4rLightishTrigger}
+		
+		.PlayButtonVccTrigger:active
+			{$AppVcc_triggerActiveEffect}
+			
+		
+		.PlayButtonVccTrigger:focus
+			outline: none;
+
+
+.TracksPanelVcc
+	.listingItem:hover 
+		.PlayButtonVcc
+			.PlayButtonVccTrigger
+				{$AppVcc_triggerHoverEffect4rLightishTrigger}
+	
+
+.TracksPanelVcc
+	.listingItem:active 
+		.PlayButtonVcc
+			.PlayButtonVccTrigger
+				{$AppVcc_triggerActiveEffect}

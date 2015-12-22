@@ -1,0 +1,19 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: Footer4StndUseVccLinkTmplt.html -->
+<!-- =============================================================== -->
+
+<div class="Footer4StndUseVcc vcBox">
+	<div class="usAndCopyright">
+		<div class="statement_in_footer">
+			© 1999-2015 <a class="link_in_statement" href="http://www.live365.com/web/components/content/info/index.live?ads=none" target="_blank">Live365 Inc.</a> All rights reserved.
+		</div>
+		<div class="linksList_in_footer">
+			<a class="link_in_linksList" href="PrivacyPolicy.pdf" target="_blank">Privacy Policy</a><a class="link_in_linksList" href="TermsOfService.pdf" target="_blank">Terms of Service</a></a><a class="link_in_linksList" href="http://www.liumei365.com/support/" target="_blank">Support</a>
+			
+		</div>
+	</div>
+
+</div>
+
+ 

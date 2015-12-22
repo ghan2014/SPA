@@ -1,0 +1,523 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: FlexiStndLayout_rspn0.styl   mk-01
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+
+/**********************************************************************/
+@require '../../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.FlexiStndLayout'
+
+
+/***********************************************************************
+ * Following reflect passive, not interactive, display.
+************************************************************************/
+
+{$myVariants}
+	.FlexiHolderVcc
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		/* Layout */
+		width: 100%;
+		min-height: calc(100vh);
+		
+		/* Test */
+		background-color__: #e0e6e6
+
+		
+	.FlexiArea
+		/* Flex-child spcf */
+		order: 10;
+		
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: column;
+
+		/* Layout */
+		width: 100%;
+		min-height: calc(100vh - 55px)
+
+		
+		
+		
+		
+	.FlexiAreaPrmStrata
+		/* Flex-child spcf */
+		order: 10;
+		
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: row;
+
+		/* Layout */
+		width: 100%;
+
+	
+		
+	.Well
+		/* Flex-child spcf */
+		order: 0;
+		
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: column;
+
+		/* Layout */
+		width: 100%;
+			
+	
+	
+		
+	.WellPrmStrata
+		/* Flex-child spcf */
+		order: 0;
+		
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: row; 
+		align-items: stretch;
+		
+		/* Layout */
+		width: 100%;
+	
+	
+	
+	.WellPrmStrata_MainSpc 
+		/* Flex-child spcf */
+		order: 0;
+		
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: column; 
+
+		/* Layout */
+		width: 100%;
+
+	
+	.WellPrmStrata_MainSpc_MainSlot
+		/* Flex-child spcf */
+		order: 0;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	/* Slots over MainSlot... */
+	.WellPrmStrata_MainSpc_UpN3Slot
+		/* Flex-child spcf */
+		order: -30;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.WellPrmStrata_MainSpc_UpN2Slot
+		/* Flex-child spcf */
+		order: -20;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.WellPrmStrata_MainSpc_UpN1Slot
+		/* Flex-child spcf */
+		order: -10
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+	/* END */
+	
+	/* Slots under MainSlot... */	
+	.WellPrmStrata_MainSpc_DnN1Slot
+		/* Flex-child spcf */
+		order: 10
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.WellPrmStrata_MainSpc_DnN2Slot
+		/* Flex-child spcf */
+		order: 20;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.WellPrmStrata_MainSpc_DnN3Slot
+		/* Flex-child spcf */
+		order: 30;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+	/* END */
+	
+	
+
+
+	/* Outer left col from main space... */
+	.WellPrmStrata_LfN2Spc
+		/* Layout */
+		display: none;
+		
+	.WellPrmStrata_LfN2Spc_DnN1Slot
+		/* Layout */
+		display: none;
+
+	.WellPrmStrata_LfN2Spc_DnN2Slot
+		/* Layout */
+		display: none;
+
+	.WellPrmStrata_LfN2Spc_DnN3Slot
+		/* Layout */
+		display: none;	
+	/* END */
+		
+	/* Inner left col from main space... */
+	.WellPrmStrata_LfN1Spc
+		/* Layout */
+		display: none;
+		
+	.WellPrmStrata_LfN1Spc_DnN1Slot
+		/* Layout */
+		display: none;
+
+	.WellPrmStrata_LfN1Spc_DnN2Slot
+		/* Layout */
+		display: none;
+
+	.WellPrmStrata_LfN1Spc_DnN3Slot
+		/* Layout */
+		display: none;	
+	/* END */	
+	
+	/* Inner right col from main space... */
+	.WellPrmStrata_RtN1Spc
+		/* Layout */
+		display: none;
+		
+	.WellPrmStrata_RtN1Spc_DnN1Slot
+		/* Layout */
+		display: none;
+
+	.WellPrmStrata_RtN1Spc_DnN2Slot
+		/* Layout */
+		display: none;
+
+	.WellPrmStrata_RtN1Spc_DnN3Slot
+		/* Layout */
+		display: none;	
+	/* END */	
+	
+	/* Outer right col from main space... */
+	.WellPrmStrata_RtN2Spc
+		/* Layout */
+		display: none;
+		
+	.WellPrmStrata_RtN2Spc_DnN1Slot
+		/* Layout */
+		display: none;
+
+	.WellPrmStrata_RtN2Spc_DnN2Slot
+		/* Layout */
+		display: none;
+
+	.WellPrmStrata_RtN2Spc_DnN3Slot
+		/* Layout */
+		display: none;	
+	/* END */		
+		
+		
+	
+		
+	/* Slots over WellPrimarySpc... */	
+	.Well_UpN3Slot
+		/* Flex-child spcf */
+		order: -30;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.Well_UpN2Slot
+		/* Flex-child spcf */
+		order: -20;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.Well_UpN1Slot
+		/* Flex-child spcf */
+		order: -10
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+	/* END */
+	
+	/* Slots under WellPrimarySpc... */	
+	.Well_DnN1Slot
+		/* Flex-child spcf */
+		order: 10
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.Well_DnN2Slot
+		/* Flex-child spcf */
+		order: 20;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.Well_DnN3Slot
+		/* Flex-child spcf */
+		order: 30;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+	/* END */
+	
+	
+	
+
+	/* Outer left col from well... */
+	.FlexiAreaPrmStrata_LfN2Spc
+		/* Layout */
+		display: none;
+		
+	.FlexiAreaPrmStrata_LfN2Spc_DnN1Slot
+		/* Layout */
+		display: none;
+
+	.FlexiAreaPrmStrata_LfN2Spc_DnN2Slot
+		/* Layout */
+		display: none;
+
+	.FlexiAreaPrmStrata_LfN2Spc_DnN3Slot
+		/* Layout */
+		display: none;	
+	/* END */
+		
+	/* Inner left col from well... */
+	.FlexiAreaPrmStrata_LfN1Spc
+		/* Layout */
+		display: none;
+		
+	.FlexiAreaPrmStrata_LfN1Spc_DnN1Slot
+		/* Layout */
+		display: none;
+
+	.FlexiAreaPrmStrata_LfN1Spc_DnN2Slot
+		/* Layout */
+		display: none;
+
+	.FlexiAreaPrmStrata_LfN1Spc_DnN3Slot
+		/* Layout */
+		display: none;	
+	/* END */	
+	
+	/* Inner right col from well... */
+	.FlexiAreaPrmStrata_RtN1Spc
+		/* Layout */
+		display: none;
+		
+	.FlexiAreaPrmStrata_RtN1Spc_DnN1Slot
+		/* Layout */
+		display: none;
+
+	.FlexiAreaPrmStrata_RtN1Spc_DnN2Slot
+		/* Layout */
+		display: none;
+
+	.FlexiAreaPrmStrata_RtN1Spc_DnN3Slot
+		/* Layout */
+		display: none;	
+	/* END */	
+	
+	/* Outer right col from well... */
+	.FlexiAreaPrmStrata_RtN2Spc
+		/* Layout */
+		display: none;
+		
+	.FlexiAreaPrmStrata_RtN2Spc_DnN1Slot
+		/* Layout */
+		display: none;
+
+	.FlexiAreaPrmStrata_RtN2Spc_DnN2Slot
+		/* Layout */
+		display: none;
+
+	.FlexiAreaPrmStrata_RtN2Spc_DnN3Slot
+		/* Layout */
+		display: none;	
+	/* END */	
+	
+	
+	
+	
+		
+	/* Slots over FlexiAreaPrmStrata... */	
+	.FlexiArea_UpN3Slot
+		/* Flex-child spcf */
+		order: -30;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.FlexiArea_UpN2Slot
+		/* Flex-child spcf */
+		order: -20;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.FlexiArea_UpN1Slot
+		/* Flex-child spcf */
+		order: -10
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+	/* END */
+	
+	/* Slots under FlexiAreaPrmStrata... */	
+	.FlexiArea_DnN1Slot
+		/* Flex-child spcf */
+		order: 10
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.FlexiArea_DnN2Slot
+		/* Flex-child spcf */
+		order: 20;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.FlexiArea_DnN3Slot
+		/* Flex-child spcf */
+		order: 30;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+	/* END */
+	
+
+	/* The top fixed area... */
+	.TheTopFixedPosArea
+		/* Flex-child spcf */
+		order: 20;
+		
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: column;
+
+		/* Layout */
+		width: 100%;
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		left: 0;
+		
+	.TheTopFixedPosArea_UpN3Slot
+		/* Flex-child spcf */
+		order: -30;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	.TheTopFixedPosArea_UpN2Slot
+		/* Flex-child spcf */
+		order: -20;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+		
+	.TheTopFixedPosArea_UpN1Slot
+		/* Flex-child spcf */
+		order: -10;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+		
+	
+	/* END */	
+		
+	
+
+	/* The footer area... */
+	.TheFooterArea
+		/* Flex-child spcf */
+		order: 30;
+		
+		/* Flex-box spcf */
+		display: flex;
+		flex-direction: column;
+
+		/* Layout */
+		width: 100%;
+		
+	.TheFooterArea_DnN1Slot
+		/* Flex-child spcf */
+		order: 10;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+
+	.TheFooterArea_DnN2Slot
+		/* Flex-child spcf */
+		order: 20;
+		
+		/* Layout */
+		display: block;
+		width: 100%;
+
+	.TheFooterArea_DnN3Slot
+		/* Flex-child spcf */
+		order: 30;
+		
+		/* Layout */
+		display: block;
+		width: 100%;	
+	/* END */	
+	
+	
+/***********************************************************************
+ ***********************************************************************
+ * CUSTOMIZATIONS
+***********************************************************************/
+	
+/*	FOR StndDetailTypePgUSAM */
+
+
+$myVariants = '.FlexiStndLayout.StndDetailTypePgUSAM'	
+
+{$myVariants}
+	.WellPrmStrata
+		padding-top: $AppVcc_stndMajorHorizGutterHeight;

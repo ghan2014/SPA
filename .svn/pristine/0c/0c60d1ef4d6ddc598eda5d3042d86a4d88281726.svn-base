@@ -1,0 +1,137 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: OoUtils.js
+ * *********************************************************************
+ * *********************************************************************
+ */
+ module.exports = (function() {
+	 
+	
+	 
+	function MyClass() {
+		var that = this;
+	}
+		
+	var p = MyClass.prototype;
+	
+	p.mergeObjects = function(targetObj, sourceObj) {
+		var vv = {};
+		$.extend.apply(null, arguments );
+		return targetObj;
+	}
+	
+	p.scaffoldClass = function( refNameChild, Child, Parent ){ 
+		console.dog(">>> Inherit");
+		var vv = {};
+		
+		//	============================================================
+		//{
+			function buildWithoutChild(Parent) {	
+				vv.parentObj = new Parent;
+				vv.parentConstStr = Parent.toString();
+
+				vv.fullChildConstStr = "vv.Child = " + vv.parentConstStr;
+				vv.voidd = eval(vv.fullChildConstStr);
+
+				//Normal Inheritance
+				vv.Child.prototype =  vv.parentObj;
+				vv.Child.prototype.constructor = vv.ChildConst;
+				vv.Child.prototype.ParentProto = Parent.prototype;
+				
+				return vv.Child;
+			}
+
+		
+		if ( typeof Child === 'undefined') {
+			console.dog(">>> Inherit - Child undefined case");
+			if ( Parent.constructor === Function ) 
+			{ 
+				Child = buildWithoutChild(Parent)
+				var lineForBreakpoint = "yada"
+			} 			
+		}
+		else if ( typeof Child === 'string') {
+			console.dog(">>> Inherit - Name for Child passed.");
+			if ( Parent.constructor === Function ) 
+			{ 
+				vv.childName = Child;
+				Child = buildWithoutChild(Parent)
+				Child.name = vv.childName
+				var lineForBreakpoint = "yada"
+			} 	
+			else 
+			{ 
+				vv.childName = Child;
+				Child = function() {};
+				Child.name = vv.childName
+				var lineForBreakpoint = "yada"
+			} 		
+		}
+		
+		else if ( Child.constructor  ===  Function  ) {
+			console.dog(">>> Inherit - Child passed as Function.");
+			if ( typeof Parent === 'undefined') {
+				console.dog(">>> No Parent Case");
+				// Do Nothing - let Child constructor pass through as present def of Child.			
+			}
+			else if ( Parent.constructor === Function ) 
+			{ 
+				vv.parentObj = new Parent
+				//Normal Inheritance
+				Child.prototype =  vv.parentObj;
+				Child.prototype.constructor = Child;
+				Child.prototype.ParentProto = Parent.prototype;
+				var lineForBreakpoint = "yada"
+			} 
+			else 
+			{ 
+				//Pure Virtual Inheritance 
+				Child.prototype = Parent;
+				Child.prototype.constructor = Child;
+				Child.prototype.parentObjlit = Parent;
+				var lineForBreakpoint = "yada"
+			} 
+		}
+
+		if (Parent) {
+			vv.refNameParent = Parent.prototype.refNameSelf || "parentNameNotDefined";
+		}
+		else {
+			vv.refNameParent = "noParent"
+		}
+		
+		Child.prototype.refNameSelf = refNameChild
+		Child.prototype.refNameParent = vv.refNameParent
+			
+		
+		if  ( !aaGlobalee.inheritanceSet ) {
+			aaGlobalee.inheritanceSet = {};
+		}
+		aaGlobalee.inheritanceSet[refNameChild + "__INHERITS__" + vv.refNameParent] = "_"
+		
+		if  ( !aaGlobalee.classesSet ) {
+			aaGlobalee.classesSet = {};
+		}
+		
+		aaGlobalee.classesSet[refNameChild] = {
+			myOwnName: refNameChild,
+			myOwnClass: Child,
+			myOwnPrototype: Child.prototype,
+			myParentName: vv.refNameParent
+		}
+		if ( Parent ) {
+			aaGlobalee.classesSet[refNameChild].myParentClass = Parent,
+			aaGlobalee.classesSet[refNameChild].myParentPrototype = Parent.prototype || "none"
+		}		
+			
+			
+
+		return Child;
+	}
+    
+    return MyClass;
+	
+})();
+

@@ -1,0 +1,27 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: FacebookLoginButtonVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+
+
+		<button type="submit" 
+				class="FacebookLoginButton"
+				data-drct_click_to_mediator_adc = '{
+					"notice": {
+						"noticeName": "FacebookAuthButton_clicked",
+						"handoffSpecId":"{{loc.handoffSpecId}}"
+					}
+				}'
+		>
+			<span class="buttonCopy"></span>
+		</button>
+
+</div>

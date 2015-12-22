@@ -1,0 +1,46 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: ChatPanelVccLinkStyle.css
+ * *********************************************************************
+ * *********************************************************************
+ */
+
+
+drct-chat-panel-vcc {
+	/** Layout **/
+	display: block;
+	width: calc( 100% );
+	min-width: 425px;
+	
+	/** Style **/
+	background-color: #ddc;
+}
+
+drct-chat-panel-vcc .requestedInfo {
+	/** Layout **/
+	display: none;
+	margin: 5px;
+	/** Style **/
+	color: #ddc;
+    text-decoration: none;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 9px;
+}
+
+
+drct-chat-panel-vcc .viewportIframe {
+	/** Layout **/
+	width: calc(100% - (5px + 5px) );
+	min-width: 425px;
+	height: 100px;
+	padding: 0;
+	margin: 5px;
+	overflow: hidden;
+	
+	/** Style **/
+	border: none;
+}
+
+

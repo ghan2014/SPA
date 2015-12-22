@@ -1,0 +1,360 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: TracksPanelVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-tracks-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.TracksPanelVcc'
+$myElders = ''
+
+
+{$myElders}
+	{$myVariants}
+		/* Layout */
+		padding-top: 10px;
+		padding-bottom: 40px;
+
+		.listingsBox
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap
+			justify-content: center;
+			align-items: center;
+
+			/* Style */	
+			border__: solid 1px green
+		
+		
+		.listingItem
+			/* Flex-child spcf */
+			order: 10;
+		
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			/* Layout */
+			width: 100%
+			padding: 0 0
+			margin: 0
+
+			/* Style */
+			
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.listingItem {
+
+				/* Layout */
+				padding: 0 10vw
+			}
+		}
+		
+			
+		.listingItem:hover .drctPlayButtonVcc
+			{$AppVcc_ontoHoverEffect4rTrigger }
+		
+		.listingItem:active .drctPlayButtonVcc
+			{$AppVcc_ontoActiveEffect4rTrigger }
+			
+			
+
+		.listingContent
+			/* Flex-child spcf */
+			order: 10;	
+	
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			/* Layout */
+			padding: 20px 0
+
+			/* Style */
+			border-bottom: $AppVcc_stndMdGreyBorder
+			
+
+			
+		
+		.listingItem:last-child > .listingContent 
+			/* Style */
+			border-bottom: none
+
+
+
+		.verticalDashboardLeft_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			/* Layout */
+			padding: 5px 20px 5px 10px
+
+			/* Style */
+			background-color__: #eee;
+			border__: solid 1px blue
+		
+		
+
+		.imageAndButtonHolder_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Layout */
+			position:relative
+			height: 115px;
+			width: 115px;
+			margin: 0 0 0 10px
+			
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.imageAndButtonHolder_in_listing {
+
+				/* Layout */
+				margin: 0 0 0 20px
+			}
+		}
+
+		.logo_in_listing
+			/* Layout */
+			height: 115px;
+			width: 115px;
+			
+			/* Style */
+			{$AppVcc_borderOnThumbImage}
+			
+			
+		.playbuttonBox_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Flex-box spcf */
+			display: block
+			
+			/* Layout */
+			position: absolute
+			top: 70px
+			left: 70px
+				
+
+			/* Style */
+			border__: solid 1px red
+
+
+
+		.primaryZone_in_listing
+			/* Flex-child spcf */
+			order: 30;
+			flex: 1;
+		
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			
+			/* Layout */
+			padding: 5px 10px 5px 10px	
+											
+
+			/* Style */
+			cursor: pointer
+			background-color__: #eee;
+			border__: solid 1px red
+			
+			
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.primaryZone_in_listing {
+
+				/* Layout */
+				padding: 5px 10px 5px 20px
+			}
+		}
+	
+
+		.header_in_listing
+			/* Flex-child spcf */
+			order: 10;
+			
+			/* Layout */
+			margin-bottom: 10px;
+		
+		.heading_in_listing
+			/* Style */
+			{$AppVcc_listingTitle}
+
+
+
+		.dashboard_in_listing
+			/* Flex-child spcf */
+			order: 20;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start
+
+			/* Layout */
+			margin-bottom: 10px
+
+			/* Style */
+			border__: solid 1px blue
+
+
+		.artistMeta_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+
+			/* Layout */
+			margin-right: 10px
+			padding-right: 10px
+
+			/* Style */
+			border-right: $AppVcc_stndMdGreyBorder;
+
+		.zz_artistMetaLabel_in_listing
+			/* Flex-child spcf */
+			order: 20;
+
+			/* Layout */
+			margin-bottom: 5px
+
+		.artistMetaCopy_in_listing
+			/* Flex-child spcf */
+			order: 10;		
+			
+			/* Style */
+			{$AppVcc_listingStatAloneValue}
+
+
+		.durationMeta_in_listing
+			/* Flex-child spcf */
+			order: 20;
+			
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+
+			/* Layout */
+
+		.zz_durationMetaLabel_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Layout */
+			margin-bottom: 5px
+
+
+		.durationMetaCopy_in_listing
+			/* Flex-child spcf */
+			order: 10;	
+			
+			/* Style */
+			{$AppVcc_listingStatAloneValue}
+
+
+
+		.descriptionZone_in_listing
+			/* Flex-child spcf */
+			order: 30;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			/* Layout */
+
+			/* Style */
+			border__: solid 1px blue
+				
+		.descriptionCopy_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			border__: solid 5px red
+
+			/* Layout */
+			display: block;
+			max-height: 51px;
+			
+			/* Style */
+			{$AppVcc_listingDescText}
+			border__: solid 1px green	
+
+			/* Layout addition for ellipses */
+			/* Ref: http://joelsaupe.com/programming/multiple-line-ellipsis-css/ */
+			
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+
+
+		.verticalDashboardRight_in_listing
+			/* Flex-child spcf */
+			order: 40;
+
+			/* Flex-box spcf */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+
+			/* Layout */
+			padding: 10px 0px 5px 10px
+
+			/* Style */
+			background-color__: #eee;
+			border__: solid 1px blue
+		
+		@media $AppVcc_stndXSmMinBreakpoint  {
+			.verticalDashboardRight_in_listing {
+
+				/* Layout */
+				padding: 10px 10px 5px 10px
+			}
+		}
+	
+
+		.utilsTrigger_in_listing
+			/* Flex-child spcf */
+			order: 10;
+
+			/* Flex-box spcf */
+			display: block
+			
+			/* Layout */
+
+			/* Style */
+			border__: solid 1px red
+
+
+		.actveListing
+			/* Style */
+			background-color: #eee		
+			
+
+
+		.listings_in_listing
+			border__: solid 1px green
+		
+			

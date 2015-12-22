@@ -1,0 +1,53 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: FloatingOptionsMenuVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+	
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} {{loc.purposing.role}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+
+	<md-menu
+		
+	>
+		<md-button 
+			class="md-icon-button"
+			aria-label="{{loc.ariaLabeling}}"  
+			data-role= '{{loc.purposing.role}}'
+			ng-click="thisc.openMenu($mdOpenMenu, $event)"
+			style="color: red;"
+		>
+		</md-button>
+
+		<md-menu-content>
+			<md-menu-item>
+				<drct-button-4r-facebook-share-vcc
+					data-purposing = {{loc.purposingForShare}}
+					data-go_dude = 'truee'
+				></drct-button-4r-facebook-share-vcc>
+			</md-menu-item>
+			
+			<md-menu-item>
+				<drct-button-4r-email-share-vcc
+					data-purposing = {{loc.purposingForShare}}
+					data-go_dude = 'truee'
+				></drct-button-4r-email-share-vcc>
+			</md-menu-item>
+
+			<md-menu-item>
+				<drct-button-4r-email-report-vcc
+					data-purposing = {{loc.purposingForShare}}
+					data-go_dude = 'truee'
+				></drct-button-4r-email-report-vcc>
+			</md-menu-item>
+		</md-menu-content>
+	</md-menu>
+
+	
+</div>
+

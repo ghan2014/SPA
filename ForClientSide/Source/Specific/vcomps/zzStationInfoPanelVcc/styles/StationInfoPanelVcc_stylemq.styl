@@ -1,0 +1,26 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: StationInfoPanelVcc_stylemq.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-station-info-panel-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.StationInfoPanelVcc'
+$myElders = ''
+
+@media (max-width: 767px) 
+	{$myElders}
+		{$myVariants}
+
+			.statsRow_in_detail
+				/* Flex-box spcf */
+				flex-direction: column;

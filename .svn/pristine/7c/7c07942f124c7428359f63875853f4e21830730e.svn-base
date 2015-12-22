@@ -1,0 +1,56 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: PlayerPanelVccLinkStyle.css
+ * *********************************************************************
+ * *********************************************************************
+ */
+
+
+drct-player-panel-vcc {
+	/** Layout **/
+	display: block;
+	width: calc( 100% );
+	min-width: 425px;
+	height: 80px;
+	
+	/** Style **/
+	background-color: transparent;
+}
+
+drct-player-panel-vcc .requestedInfo {
+	/** Layout **/
+	margin__: 5px;
+	/** Style **/
+	color: #ddf;
+    text-decoration: none;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 9px;
+}
+
+
+drct-player-panel-vcc .viewportIframe {
+	/** Layout **/
+	width: calc(100% - (0px + 0px) );
+	min-width: 425px;
+	height: 80px;
+	padding: 0;
+	margin__: 5px;
+	overflow: hidden;
+	
+	/** Style **/
+	border: none;
+}
+
+drct-player-panel-vcc drct-floating-options-menu-vcc  {
+	/** Layout **/
+	display: block;
+	position: absolute;
+	margin-left: 26vw;
+	margin-top: -160px;
+	width: 1px;
+
+
+}
+

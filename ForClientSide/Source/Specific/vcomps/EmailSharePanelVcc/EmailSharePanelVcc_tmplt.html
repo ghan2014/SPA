@@ -1,0 +1,78 @@
+<div>
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: EmailSharePanelVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+
+<!-- This is the {{view.myName}} Tmplt. -->
+<div class="{{loc.myVcName}} vcBox"  
+	ng-if="loc.okToShow"
+>
+
+	<div class="whoAmI">This is the inside of {{loc.myVcName}}.</div>
+	
+
+	<ng-form class="StndEmailForm"
+			name="StndEmailForm"
+			novalidate		
+	>
+		<fieldset>
+			<div class="InnerFieldset">
+				<div class="FieldSetItem">
+					<label for="EmailRecipient" class="sr-only">
+						Recipient's Email Address
+					</label>
+					<input	type="email" 
+							id="EmailRecipient" 
+							name="EmailRecipient" 
+							minlength="4"
+							maxlength="30"
+							class="form-input"
+							required 
+							ng-model="loc.EmailRecipient"
+							placeholder="To Email Address"
+					>
+					<div class="form_error">
+						 <div ng-if="StndEmailForm.EmailRecipient.$error.email">Invalid email address.</div>
+						 <div ng-if="StndEmailForm.EmailRecipient.$error.minlength">Input too short.</div>
+						 <div ng-if="StndEmailForm.EmailRecipient.$error.maxlength">Input too long.</div>
+					</div>
+				</div>
+				
+				<!-- No API for this field
+				<div class="FieldSetItem">
+					<label for="EmailMessage" class="form-label">
+						MESSAGE
+					</label>
+
+					<textarea ng-model="messageArea" ng-trim="false" minlength="2" maxlength="200" class="form-textarea" required name="EmailMessage" id="EmailMessage" placeholder="MESSAGE"></textarea>
+					<div>{{200 - messageArea.length}} characters left</div>
+					<div ng-if="StndEmailForm.EmailMessage.$error.minlength">Input too short.</div>
+					 
+				</div>
+				-->
+
+				<hr class="form-hr-2">
+
+				<div class="form-info">
+					<div class="ItemLogoImgHolder_in_EmailShare">
+						<img src="{{loc.picture}}" alt="Logo for project named {{loc.name}}" class="ItemLogoImg_in_EmailShare">
+					</div>
+
+					<div class="ItemName_in_EmailShare">
+						<span class="ItemNameLabel_in_EmailShare">{{loc.nameLabel}}</span>:  {{loc.name}}
+					</div>
+				</div>
+
+				<div class="ItemDescription_in_EmailShare">
+					{{loc.description}}
+				</div>
+
+				<input type="hidden" name="handoffSpecId" value="{{loc.handoffSpecId}}">
+			</div>
+		</fieldset>
+
+	</ng-form>
+</div>
+</div>

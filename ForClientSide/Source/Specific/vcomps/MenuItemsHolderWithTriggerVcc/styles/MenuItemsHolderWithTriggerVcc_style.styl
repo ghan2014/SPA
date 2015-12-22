@@ -1,0 +1,93 @@
+/*
+ * *********************************************************************
+ * *********************************************************************
+ * *********************************************************************
+ * File: MenuItemsHolderWithTriggerVcc_style.styl
+ * *********************************************************************
+ * *********************************************************************
+ */
+ 
+drct-menu-items-holder-with-trigger-vcc {
+	display: block;
+}
+
+
+@require '../../AppVcc/AppVcc_styleLib.styl'
+
+$myVariants = '.MenuItemsHolderWithTriggerVcc'
+
+
+$myElders = '.StationInfoPanelVcc'
+{$myElders}
+
+	{$myVariants}
+		.myMdIconButton 
+			/* Style */
+			{ $AppVcc_sprite-more_dots_white_cover}
+			
+		.myMdIconButton:hover
+			{$AppVcc_triggerHoverEffect4rLightishTrigger}
+		
+		.myMdIconButton:active
+			{$AppVcc_triggerActiveEffect}
+			
+		.myMdIconButton:focus
+			outline: none;
+			
+		
+			
+$myElders = '.PlaylistInfoPanelVcc'
+{$myElders}
+	{$myVariants}
+		
+		.myMdIconButton 
+			/* Style */
+			{ $AppVcc_sprite-more_dots }
+			
+		.myMdIconButton:hover
+			{$AppVcc_triggerHoverEffect4rDarkishTrigger}
+			
+		.myMdIconButton:active
+			{$AppVcc_triggerActiveEffect} 
+			
+			
+			
+$myElders = '.TracksPanelVcc'
+{$myElders}
+	{$myVariants}
+		
+		.myMdIconButton 
+			/* Style */
+			{ $AppVcc_sprite-more_dots}
+			
+		.myMdIconButton:hover
+			{$AppVcc_triggerHoverEffect4rDarkishTrigger}
+			
+		.myMdIconButton:active
+			{$AppVcc_triggerActiveEffect} 
+				
+		
+
+{$myVariants}
+
+	.myMdIconButton
+		border: none;
+		background-color: transparent;
+		border-radius: 50px /* Insure max curvature */
+		
+
+			
+.md-open-menu-container {
+	{$AppVcc_floatingBox}
+}
+
+md-menu-content {
+	min-width: 1px !important
+	padding: 10px 15px !important
+	text-align: center !important
+
+}
+
+md-menu-item>* {
+	padding: 0 !important
+}

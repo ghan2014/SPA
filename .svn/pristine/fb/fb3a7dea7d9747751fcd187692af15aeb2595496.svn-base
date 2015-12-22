@@ -1,0 +1,351 @@
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- File: FlexiHolderVcc_tmplt.html -->
+<!-- =============================================================== -->
+
+<!-- This is the {{datas.view.info.myname}} Tmplt.  Time: {{datas.view.info.time}} . -->
+<div class="{{ssvv.myCssName}} vcBox {{datas.view.mech.string_footerOffset_yesOrNo}}"> 
+
+	<div class="FlexiArea"
+		ng-if="ssvv.domSwitches.FlexiArea"
+	>
+		<!--- NOT PRESENTLY USED, BUT KEEP FOR POSSIBLE FUTURE USE/REF
+			  ... NOTE, Inputs, labels and Well should be sibling, and in that order.
+			  
+			<br><br>
+	
+			<input class="MainSideMenuN3" id="MainSideMenuN3"  type="checkbox">
+			<label class="MainSideMenuN3Label" for="MainSideMenuN3">Menu 3</label>
+			
+			
+			<input class="MainSideMenuN2" id="MainSideMenuN2"  type="checkbox">		
+			<label class="MainSideMenuN2Label" for="MainSideMenuN2">Menu 2</label>
+			
+			<div class="MenuButtonBlocker"></div>
+		--->
+		
+		<div class="FlexiAreaPrmStrata"
+			ng-if="ssvv.domSwitches.FlexiAreaPrmStrata"
+		>
+		
+			<div class="Well"
+				ng-if="ssvv.domSwitches.Well"
+			>
+				<div class="WellPrmStrata"
+					ng-if="ssvv.domSwitches.WellPrmStrata"
+				>
+					<!-- Well's main column -->
+					<div class="WellPrmStrata_MainSpc"
+						ng-if="ssvv.domSwitches.WellPrmStrata_MainSpc"
+					>
+						<!--( Slots in WellPrmStrata_MainSpc... -->
+						<main class="WellPrmStrata_MainSpc_MainSlot VwSlot"
+							ng-if="ssvv.domSwitches.WellPrmStrata_MainSpc_MainSlot"
+							data-ui-view="WellPrmStrata_MainSpc_MainSlot"
+						>
+						</main>
+						
+						<!--( Slots above main tag... -->
+						<div class="WellPrmStrata_MainSpc_UpN3Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_MainSpc_UpN3Slot"
+							data-ui-view="WellPrmStrata_MainSpc_UpN3Slot"
+						>
+						</div>
+						<div class="WellPrmStrata_MainSpc_UpN2Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_MainSpc_UpN2Slot"
+							data-ui-view="WellPrmStrata_MainSpc_UpN2Slot"
+						>
+						</div>
+						<div class="WellPrmStrata_MainSpc_UpN1Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_MainSpc_UpN1Slot"
+							data-ui-view="WellPrmStrata_MainSpc_UpN1Slot"
+						>
+						</div>
+						<!--) ...Slots above main tag -->
+
+						<!--( Slots below main tag... -->
+						<div class="WellPrmStrata_MainSpc_DnN1Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_MainSpc_DnN1Slot"
+							data-ui-view="WellPrmStrata_MainSpc_DnN1Slot"
+						>
+						</div>
+						<div class="WellPrmStrata_MainSpc_DnN2Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_MainSpc_DnN2Slot"
+							data-ui-view="WellPrmStrata_MainSpc_DnN2Slot"
+						>
+						</div>
+						<div class="WellPrmStrata_MainSpc_DnN3Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_MainSpc_DnN3Slot"
+							data-ui-view="WellPrmStrata_MainSpc_DnN3Slot"
+						>
+						</div>
+						<!--) ...Slots below main tag -->
+						<!--) ...Slots in WellPrmStrata_MainSpc -->
+					</div><!-- END: WellPrmStrata_MainSpc -->
+					
+					
+					<!-- WellPrmStrata_LfN2Spc - WellPrmStrata_'s column, two left of center -->
+					<div class="WellPrmStrata_LfN2Spc"
+						ng-if="ssvv.domSwitches.WellPrmStrata_LfN2Spc"
+					>
+						<div class="WellPrmStrata_LfN2Spc_DnN1Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_LfN2Spc_DnN1Slot"
+							data-ui-view="WellPrmStrata_LfN2Spc_DnN1Slot"
+						>
+						</div>
+						<div class="WellPrmStrata_LfN2Spc_DnN2Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_LfN2Spc_DnN2Slot"
+							data-ui-view="WellPrmStrata_LfN2Spc_DnN2Slot"
+						>
+						</div>	
+						<div class="WellPrmStrata_LfN2Spc_DnN3Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_LfN2Spc_DnN3Slot"
+							data-ui-view="WellPrmStrata_LfN2Spc_DnN3Slot"
+						>
+						</div>
+					</div><!-- END: WellPrmStrata_LfN2Spc - WellPrmStrata_'s column, two left of center -->
+					
+					<!-- WellPrmStrata_LfN1Spc - WellPrmStrata_'s column, one left of center  -->
+					<div class="WellPrmStrata_LfN1Spc"
+						ng-if="ssvv.domSwitches.WellPrmStrata_LfN1Spc"
+					>
+						
+						<div class="WellPrmStrata_LfN1Spc_DnN1Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_LfN1Spc_DnN1Slot"
+							data-ui-view="WellPrmStrata_LfN1Spc_DnN1Slot"
+						>
+						</div>
+						<div class="WellPrmStrata_LfN1Spc_DnN2Slot VwSlot"
+							ng-if="ssvv.domSwitches.WellPrmStrata_LfN1Spc_DnN2Slot"
+							data-ui-view="WellPrmStrata_LfN1Spc_DnN2Slot"
+						>
+						</div>	
+						<div class="WellPrmStrata_LfN1Spc_DnN3Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_LfN1Spc_DnN3Slot"
+							data-ui-view="WellPrmStrata_LfN1Spc_DnN3Slot"
+						>
+						</div>
+							
+					</div><!-- END: WellPrmStrata_LfN1Spc - WellPrmStrata_'s column, one left of center  -->
+
+					<!-- WellPrmStrata_RtN1Spc - WellPrmStrata_'s column, one right of center -->
+					<div class="WellPrmStrata_RtN1Spc"
+						ng-if="ssvv.domSwitches.WellPrmStrata_RtN1Spc"
+					>
+						<div class="WellPrmStrata_RtN1Spc_DnN1Slot VwSlot"
+							ng-if="ssvv.domSwitches.WellPrmStrata_RtN1Spc_DnN1Slot"
+							data-ui-view="WellPrmStrata_RtN1Spc_DnN1Slot"
+						>
+						</div>
+						<div class="WellPrmStrata_RtN1Spc_DnN2Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_RtN1Spc_DnN2Slot"
+							data-ui-view="WellPrmStrata_RtN1Spc_DnN2Slot"
+						>
+						</div>	
+						<div class="WellPrmStrata_RtN1Spc_DnN3Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_RtN1Spc_DnN3Slot"
+							data-ui-view="WellPrmStrata_RtN1Spc_DnN3Slot"
+						>
+						</div>													
+														
+					</div><!-- END: WellPrmStrata_RtN1Spc - WellPrmStrata_'s column, one right of center -->
+					
+					<!-- WellPrmStrata_RtN2Spc - WellPrmStrata_'s column, one right of center -->
+					<div class="WellPrmStrata_RtN2Spc"
+						ng-if="ssvv.domSwitches.WellPrmStrata_RtN2Spc"
+					>	
+						<div class="WellPrmStrata_RtN2Spc_DnN3Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_RtN2Spc"
+							data-ui-view="WellPrmStrata_RtN2Spc_DnN3Slot"
+						>
+						</div>
+						<div class="WellPrmStrata_RtN2Spc_DnN2Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_RtN2Spc_DnN2Slot"
+							data-ui-view="WellPrmStrata_RtN2Spc_DnN2Slot"
+						>
+						</div>	
+						<div class="WellPrmStrata_RtN2Spc_DnN3Slot VwSlot" 
+							ng-if="ssvv.domSwitches.WellPrmStrata_RtN2Spc_DnN3Slot"
+							data-ui-view="WellPrmStrata_RtN2Spc_DnN3Slot"
+						>
+						</div>									
+					</div><!-- END: WellPrmStrata_RtN2Spc - WellPrmStrata_'s column, one right of center -->
+
+				</div><!-- END: WellPrmStrata -->
+				
+				
+				<!--( Slots above WellPrmStrata... -->
+				<div class="Well_UpN3Slot  VwSlot" 
+					ng-if="ssvv.domSwitches.Well_UpN3Slot"
+					data-ui-view="Well_UpN3Slot"
+				>
+				</div>
+				<div class="Well_UpN2Slot  VwSlot" 
+					ng-if="ssvv.domSwitches.Well_UpN2Slot"
+					data-ui-view="Well_UpN2Slot"
+				>
+				</div>
+				<div class="Well_UpN1Slot  VwSlot" 
+					ng-if="ssvv.domSwitches.Well_UpN1Slot"
+					data-ui-view="Well_UpN1Slot"
+				>	
+				</div>
+				<!--) ...Slots above WellPrmStrata... -->
+				<!--( Slots below WellPrmStrata... -->
+				<div class="Well_DnN1Slot  VwSlot"
+					ng-if="ssvv.domSwitches.Well_DnN1Slot"
+					data-ui-view="Well_DnN1Slot"
+				>
+				</div>
+				<div class="Well_DnN2Slot  VwSlot" 
+					ng-if="ssvv.domSwitches.Well_DnN2Slot"
+					data-ui-view="Well_DnN2Slot"
+				>
+				</div>
+				<div class="Well_DnN3Slot  VwSlot" 
+					ng-if="ssvv.domSwitches.Well_DnN3Slot"
+					data-ui-view="Well_DnN3Slot"
+				>
+				</div>
+				<!--) ...Slots below WellPrmStrata... -->
+			</div><!-- END: Well -->
+			
+			<!-- FlexiAreaPrmStrata_LfN1Spc - FlexiAreaPrmStrata_'s column, one left of center (well).  -->
+			<div class="FlexiAreaPrmStrata_LfN1Spc"
+				ng-if="ssvv.domSwitches.FlexiAreaPrmStrata_LfN1Spc"
+			>
+				
+				<div class="FlexiAreaPrmStrata_LfN1Spc_DnN1Slot VwSlot" 
+					ng-if="ssvv.domSwitches.FlexiAreaPrmStrata_LfN1Spc_DnN1Slot"
+					data-ui-view="FlexiAreaPrmStrata_LfN1Spc_DnN1Slot"
+				>
+				</div>
+				<div class="FlexiAreaPrmStrata_LfN1Spc_DnN2Slot VwSlot"
+					ng-if="ssvv.domSwitches.FlexiAreaPrmStrata_LfN1Spc_DnN2Slot"
+					data-ui-view="FlexiAreaPrmStrata_LfN1Spc_DnN2Slot"
+				>
+				</div>	
+				<div class="FlexiAreaPrmStrata_LfN1Spc_DnN3Slot VwSlot" 
+					ng-if="ssvv.domSwitches.FlexiAreaPrmStrata_LfN1Spc_DnN3Slot"
+					data-ui-view="FlexiAreaPrmStrata_LfN1Spc_DnN3Slot"
+				>
+				</div>
+					
+			</div><!-- END: FlexiAreaPrmStrata_LfN1Spc - FlexiAreaPrmStrata_'s column, one left of center (well).  -->
+
+			<!-- FlexiAreaPrmStrata_RtN1Spc - FlexiAreaPrmStrata_'s column, one right of center  (well). -->
+			<div class="FlexiAreaPrmStrata_RtN1Spc"
+				ng-if="ssvv.domSwitches.FlexiAreaPrmStrata_RtN1Spc"
+			>
+				<div class="FlexiAreaPrmStrata_RtN1Spc_DnN1Slot VwSlot"
+					ng-if="ssvv.domSwitches.FlexiAreaPrmStrata_RtN1Spc_DnN1Slot"
+					data-ui-view="FlexiAreaPrmStrata_RtN1Spc_DnN1Slot"
+				>
+				</div>
+				<div class="FlexiAreaPrmStrata_RtN1Spc_DnN2Slot VwSlot" 
+					ng-if="ssvv.domSwitches.FlexiAreaPrmStrata_RtN1Spc_DnN2Slot"
+					data-ui-view="FlexiAreaPrmStrata_RtN1Spc_DnN2Slot"
+				>
+				</div>	
+				<div class="FlexiAreaPrmStrata_RtN1Spc_DnN3Slot VwSlot" 
+					ng-if="ssvv.domSwitches.FlexiAreaPrmStrata_RtN1Spc_DnN3Slot"
+					data-ui-view="FlexiAreaPrmStrata_RtN1Spc_DnN3Slot"
+				>
+				</div>													
+												
+			</div><!-- END: FlexiAreaPrmStrata_RtN1Spc - FlexiAreaPrmStrata_'s column, one right of center (well). -->
+					
+		</div><!-- END: FlexiAreaPrmStrata -->
+		
+		<!-- TopStrata -->
+		<div class="FlexiArea_UpN3Slot VwSlot" 
+			ng-if="ssvv.domSwitches.FlexiArea_UpN3Slot"
+			data-ui-view="FlexiArea_UpN3Slot"
+		>
+		</div>
+		
+		<div class="FlexiArea_UpN2Slot VwSlot" 
+			ng-if="ssvv.domSwitches.FlexiArea_UpN2Slot"
+			data-ui-view="FlexiArea_UpN2Slot"
+		>
+		</div>
+		
+		<div class="FlexiArea_UpN1Slot VwSlot" 
+			ng-if="ssvv.domSwitches.FlexiArea_UpN1Slot"
+			data-ui-view="FlexiArea_UpN1Slot"
+		>
+		</div>
+		<!-- END: TopStrata -->
+		
+
+		<!-- BtmStrata -->
+		<div class="FlexiArea_DnN1Slot VwSlot"
+			ng-if="ssvv.domSwitches.FlexiArea_DnN1Slot"
+			data-ui-view="FlexiArea_DnN1Slot"
+		>
+		</div>
+		
+		<div class="FlexiArea_DnN2Slot VwSlot" 
+			ng-if="ssvv.domSwitches.FlexiArea_DnN2Slot"
+			data-ui-view="FlexiArea_DnN2Slot"
+		>
+		</div>
+		
+		<div class="FlexiArea_DnN3Slot VwSlot" 
+			ng-if="ssvv.domSwitches.FlexiArea_DnN3Slot"
+			data-ui-view="FlexiArea_DnN3Slot"
+		>
+		</div>
+
+		<!-- END: BtmStrata -->
+	</div><!-- END: AbovePageFooter -->
+	
+	
+	<!-- TheTopFixedPosArea -->
+	<div class="TheTopFixedPosArea"
+		ng-if="ssvv.domSwitches.TheTopFixedPosArea"
+	>
+	
+		<div class="TheTopFixedPosArea_UpN3Slot VwSlot"
+			ng-if="ssvv.domSwitches.TheTopFixedPosArea_UpN3Slot"
+			data-ui-view="TheTopFixedPosArea_UpN3Slot"
+		>
+		</div>
+		<div class="TheTopFixedPosArea_UpN2Slot VwSlot"
+			ng-if="ssvv.domSwitches.TheTopFixedPosArea_UpN2Slot"
+			data-ui-view="TheTopFixedPosArea_UpN2Slot"
+		>
+		</div>
+		<div class="TheTopFixedPosArea_UpN1Slot VwSlot"
+			ng-if="ssvv.domSwitches.TheTopFixedPosArea_UpN1Slot"
+			data-ui-view="TheTopFixedPosArea_UpN1Slot"
+		>
+		</div>
+		
+	</div><!-- END: TheTopFixedPosArea -->
+	
+	
+	<!-- TheFooterArea -->
+	<div class="TheFooterArea  {{ssvv.footerOffsetCssName}}"
+		ng-if="ssvv.domSwitches.TheFooterArea"
+	>
+	
+		<div class="TheFooterArea_DnN1Slot VwSlot"
+			ng-if="ssvv.domSwitches.TheFooterArea_DnN1Slot"
+			data-ui-view="TheFooterArea_DnN1Slot"
+		>
+		</div>
+		
+		<div class="TheFooterArea_DnN2Slot VwSlot" 
+			ng-if="ssvv.domSwitches.TheFooterArea_DnN2Slot"
+			data-ui-view="TheFooterArea_DnN2Slot"
+		>
+		</div>
+		
+		<div class="TheFooterArea_DnN3Slot VwSlot" 
+			ng-if="ssvv.domSwitches.TheFooterArea_DnN3Slot"
+			data-ui-view="TheFooterArea_DnN3Slot"
+		>
+		</div>	
+	</div><!-- END: TheFooterArea -->
+</div>
